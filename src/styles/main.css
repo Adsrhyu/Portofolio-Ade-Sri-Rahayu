@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,400;1,600;1,700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg-primary: #FCF9F7;
+  --bg-surface: #FFFFFF;
+  --bg-surface-subtle: #F7EFEA;
+  --text-primary: #0F172A;
+  --text-secondary: #334155;
+  --text-muted: #64748B;
+  --accent-rose: #BE123C;
+  --accent-rose-dark: #9F1239;
+  --accent-rose-soft: #FFE4E9;
+  --accent-gold: #D97706;
+  --border-color: #F0DFD8;
+  --border-subtle: #F5EAE4;
+  --shadow-soft: 0 10px 30px -5px rgba(190, 18, 60, 0.06), 0 4px 6px -2px rgba(190, 18, 60, 0.03);
+}
+
+.dark {
+  --bg-primary: #090A0F;
+  --bg-surface: #121622;
+  --bg-surface-subtle: #1A1F2F;
+  --text-primary: #F8FAFC;
+  --text-secondary: #CBD5E1;
+  --text-muted: #94A3B8;
+  --accent-rose: #FB7185;
+  --accent-rose-dark: #FDA4AF;
+  --accent-rose-soft: #38121E;
+  --accent-gold: #FBBF24;
+  --border-color: #2D3748;
+  --border-subtle: #1E293B;
+  --shadow-soft: 0 10px 30px -5px rgba(0, 0, 0, 0.6);
+}
+
+* {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  transition: background-color 0.3s ease, color 0.3s ease;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 7px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-primary);
+}
+::-webkit-scrollbar-thumb {
+  background: #BE123C;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #9F1239;
+}
+
+/* Glassmorphism Classes */
+.glass-nav {
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(190, 18, 60, 0.12);
+}
+
+.dark .glass-nav {
+  background: rgba(18, 22, 34, 0.92);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(251, 113, 133, 0.15);
+}
+
+.glass-card {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-color);
+  box-shadow: var(--shadow-soft);
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s ease;
+}
+
+.glass-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 35px -10px rgba(190, 18, 60, 0.12);
+}
+
+/* Typography Enhancements */
+.font-display {
+  font-family: 'Playfair Display', serif;
+}
+
+.heading-gradient {
+  background: linear-gradient(135deg, #0F172A 0%, #BE123C 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.dark .heading-gradient {
+  background: linear-gradient(135deg, #FFFFFF 0%, #FDA4AF 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Reading Progress Bar */
+.reading-progress-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 3.5px;
+  background: linear-gradient(to right, #BE123C, #F43F5E, #FBBF24);
+  z-index: 100;
+  transition: width 0.1s ease-out;
+}
+
+/* Arch Frame for Executive Portrait */
+.arch-frame {
+  border-top-left-radius: 12rem;
+  border-top-right-radius: 12rem;
+  border-bottom-left-radius: 1.5rem;
+  border-bottom-right-radius: 1.5rem;
+  overflow: hidden;
+}
+
+/* Toast Animation */
+@keyframes toastSlideIn {
+  from {
+    transform: translateY(20px) scale(0.95);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+}
+
+.toast-animate {
+  animation: toastSlideIn 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Subtle Floating Animation */
+@keyframes gentleFloat {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-8px); }
+}
+
+.float-gentle {
+  animation: gentleFloat 6s ease-in-out infinite;
+}
+
+/* Print Styles for CV */
+@media print {
+  body {
+    background: #FFFFFF !important;
+    color: #000000 !important;
+    font-size: 11pt !important;
+  }
+  .no-print {
+    display: none !important;
+  }
+  .cv-print-area {
+    display: block !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    box-shadow: none !important;
+    border: none !important;
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+}
