@@ -1,0 +1,2499 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ade Sri Rahayu | Portofolio Profesional Pendidikan Ekonomi & Kewirausahaan</title>
+  
+  <!-- Meta SEO & Description -->
+  <meta name="description" content="Portofolio resmi Ade Sri Rahayu - Mahasiswa S1 Pendidikan Ekonomi Universitas Siliwangi (IPK 3.82 / 4.00). Penggiat kewirausahaan mahasiswa, tata kelola keuangan organisasi, dan manajemen operasional DIKMI Mart." />
+  <meta name="keywords" content="Ade Sri Rahayu, Portofolio, Pendidikan Ekonomi, Universitas Siliwangi, HMJ DIKMI, DIKMI Mart, Kewirausahaan, PKM-K, Tasikmalaya" />
+  <meta name="author" content="Ade Sri Rahayu" />
+
+  <!-- Google Fonts: Plus Jakarta Sans, Playfair Display, Bebas Neue, & Caveat -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Caveat:wght@600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,400;1,600;1,700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome 6 Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+  <!-- React 18 & Babel Standalone (Zero-Config Direct Browser Run) -->
+  <script src="https://unpkg.com/react@18/umd/react.production.min.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js" crossorigin></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+  <!-- Tailwind CSS CDN with Custom Executive Tokens -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            theme: {
+              rose: '#BE123C',
+              roseDark: '#9F1239',
+              roseLight: '#FFE4E9',
+              gold: '#D97706',
+              goldLight: '#FBBF24',
+              cream: '#FCF9F7',
+              darkBg: '#090A0F',
+              darkSurface: '#121622',
+            }
+          },
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            display: ['"Playfair Display"', 'serif'],
+            poster: ['"Bebas Neue"', '"Plus Jakarta Sans"', 'sans-serif'],
+            script: ['"Caveat"', 'cursive', 'serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    :root {
+      --bg-primary: #FCF9F7;
+      --bg-surface: #FFFFFF;
+      --text-primary: #0F172A;
+      --text-secondary: #334155;
+    }
+
+    .dark {
+      --bg-primary: #090A0F;
+      --bg-surface: #121622;
+      --text-primary: #F8FAFC;
+      --text-secondary: #CBD5E1;
+    }
+
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background-color: var(--bg-primary);
+      color: var(--text-primary);
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar { width: 7px; }
+    ::-webkit-scrollbar-track { background: var(--bg-primary); }
+    ::-webkit-scrollbar-thumb { background: #BE123C; border-radius: 9999px; }
+    ::-webkit-scrollbar-thumb:hover { background: #9F1239; }
+
+    /* Glassmorphism */
+    .glass-nav {
+      background: rgba(255, 255, 255, 0.92);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-bottom: 1px solid rgba(190, 18, 60, 0.12);
+    }
+    .dark .glass-nav {
+      background: rgba(18, 22, 34, 0.92);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-bottom: 1px solid rgba(251, 113, 133, 0.15);
+    }
+
+    /* Reading Progress Bar */
+    .reading-progress-bar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 3.5px;
+      background: linear-gradient(to right, #BE123C, #F43F5E, #FBBF24);
+      z-index: 100;
+      transition: width 0.1s ease-out;
+    }
+
+    /* Arch Frame for Executive Portrait */
+    .arch-frame {
+      border-top-left-radius: 12rem;
+      border-top-right-radius: 12rem;
+      border-bottom-left-radius: 1.5rem;
+      border-bottom-right-radius: 1.5rem;
+      overflow: hidden;
+    }
+
+    /* Typography */
+    .font-display { font-family: 'Playfair Display', serif; }
+    
+    .heading-gradient {
+      background: linear-gradient(135deg, #0F172A 0%, #BE123C 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .dark .heading-gradient {
+      background: linear-gradient(135deg, #FFFFFF 0%, #FDA4AF 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    /* Toast Animation */
+    @keyframes toastSlideIn {
+      from { transform: translateY(20px) scale(0.95); opacity: 0; }
+      to { transform: translateY(0) scale(1); opacity: 1; }
+    }
+    .toast-animate {
+      animation: toastSlideIn 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    }
+
+    /* Floating Circular Portrait Animations */
+    @keyframes floatCircle {
+      0%, 100% { transform: translateY(0px) rotate(0deg); }
+      50% { transform: translateY(-12px) rotate(1deg); }
+    }
+    @keyframes floatBadge1 {
+      0%, 100% { transform: translateY(0px) scale(1); }
+      50% { transform: translateY(-8px) scale(1.03); }
+    }
+    @keyframes floatBadge2 {
+      0%, 100% { transform: translateY(0px) scale(1); }
+      50% { transform: translateY(8px) scale(0.98); }
+    }
+    @keyframes pulseGlowRing {
+      0%, 100% { transform: scale(1); opacity: 0.6; }
+      50% { transform: scale(1.06); opacity: 0.9; }
+    }
+    @keyframes spinSlow {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+    @keyframes twinkleStar {
+      0%, 100% { transform: scale(0.8) rotate(0deg); opacity: 0.4; }
+      50% { transform: scale(1.3) rotate(45deg); opacity: 1; }
+    }
+    .animate-float-circle {
+      animation: floatCircle 5s ease-in-out infinite;
+    }
+    .animate-float-badge1 {
+      animation: floatBadge1 4s ease-in-out infinite;
+    }
+    .animate-float-badge2 {
+      animation: floatBadge2 4.5s ease-in-out infinite 0.5s;
+    }
+    .animate-pulse-glow {
+      animation: pulseGlowRing 4s ease-in-out infinite;
+    }
+    .animate-spin-slow {
+      animation: spinSlow 18s linear infinite;
+    }
+    .animate-twinkle {
+      animation: twinkleStar 2.5s ease-in-out infinite;
+    }
+    .animate-twinkle-delay {
+      animation: twinkleStar 2.5s ease-in-out infinite 1.2s;
+    }
+
+    /* Text Motion Animations */
+    @keyframes textShimmer {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+    @keyframes gentleFloatText {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-7px); }
+    }
+    @keyframes heartBeat {
+      0%, 100% { transform: scale(1); }
+      25% { transform: scale(1.18); }
+      40% { transform: scale(0.98); }
+      60% { transform: scale(1.12); }
+    }
+    .animate-gradient-text {
+      background-size: 250% auto;
+      animation: textShimmer 4.5s ease infinite;
+    }
+    .animate-float-text {
+      animation: gentleFloatText 3.8s ease-in-out infinite;
+    }
+    /* Orbiting Animations */
+    @keyframes orbitClockwise {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+    @keyframes counterRotate {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(-360deg); }
+    }
+    .animate-orbit {
+      animation: orbitClockwise 12s linear infinite;
+    }
+    .animate-counter-rotate {
+      animation: counterRotate 12s linear infinite;
+    }
+
+    /* Print styling */
+    @media print {
+      body { background: #FFFFFF !important; color: #000000 !important; font-size: 11pt !important; }
+      .no-print { display: none !important; }
+      .cv-print-area { display: block !important; padding: 0 !important; margin: 0 !important; width: 100% !important; }
+    }
+  </style>
+</head>
+<body class="antialiased selection:bg-rose-700 selection:text-white">
+
+  <!-- React Root Container -->
+  <div id="root"></div>
+
+  <!-- React Application Core Script (Transpiled with Babel Standalone) -->
+  <script type="text/babel">
+    const { useState, useEffect } = React;
+
+    // === DATA TERPUSAT PORTFOLIO ===
+    const portfolioData = {
+      personal: {
+        name: "Ade Sri Rahayu",
+        nickName: "Ade Sri",
+        title: "Pendidikan Ekonomi",
+        portfolioName: "Portofolio Ade Sri Rahayu",
+        tagline: "Kandidat Berintegritas, Teliti, dan Siap Berkontribusi Nyata.",
+        bio: "Mahasiswa S1 Pendidikan Ekonomi Universitas Siliwangi dengan rekam jejak kepemimpinan 2 periode di Divisi Kewirausahaan (DIKMI Mart) dan 7+ kepanitiaan universitas hingga nasional. Menguasai pengolahan data & administrasi (Excel, Word, PowerPoint), komunikasi efektif, serta manajemen waktu yang disiplin. Siap memberikan dampak positif dan kinerja prima sejak hari pertama bekerja.",
+        hrPromise: "Berkomitmen menghadirkan etos kerja tinggi, ketelitian administratif, dan kepemimpinan adaptif untuk mendukung pencapaian target strategis divisi Anda.",
+        photoUrl: "./assets/ade-about.jpg",
+        photoHeroUrl: "./assets/ade-hero.jpg",
+        photoAboutUrl: "./assets/ade-about.jpg",
+        status: "Mahasiswa Aktif (2023 — Sekarang)",
+        university: "Universitas Siliwangi (UNSIL)",
+        faculty: "Fakultas Keguruan dan Ilmu Pendidikan (FKIP)",
+        major: "S1 Pendidikan Ekonomi",
+        gpa: "3.82 / 4.00",
+        location: "Kota Tasikmalaya, Jawa Barat, Indonesia",
+        email: "adsrhyu20@gmail.com",
+        phone: "0856-0347-5908",
+        whatsapp: "6285603475908",
+        address: "Jl. Gunung Roay 1, Kahuripan, Tawang, Kota Tasikmalaya",
+        cvPdfUrl: "./CV/CV%20Ade%20Sri%20Rahayu.pdf",
+        socials: {
+          instagram: "https://www.instagram.com/adsrhyu_20?igsh=a3E1anU3ejJtaTlw&igsi=a3E1anU3ejJtaTlw",
+          linkedin: "https://www.linkedin.com/in/ade-sri-rahayu-8b783935a?utm_source=share_via&utm_content=profile&utm_medium=member_android",
+          whatsapp: "https://wa.me/6285603475908?text=Halo%20Ade%20Sri%20Rahayu,%20kami%20tertarik%20dengan%20kualifikasi%20Anda%20dan%20ingin%20mendiskusikan%20peluang%20karir."
+        }
+      },
+
+      stats: [
+        { label: "Indeks Prestasi Kumulatif", value: "3.82", unit: "IPK", desc: "Dari skala 4.00 (Konsistensi Akademik)" },
+        { label: "Pengalaman Organisasi", value: "2", unit: "Periode", desc: "Divisi Kewirausahaan HMJ DIKMI" },
+        { label: "Kepanitiaan & Program", value: "7+", unit: "Event", desc: "Tingkat Fakultas, Univ, & Nasional" },
+        { label: "Portofolio & Studi Kasus", value: "6+", unit: "Karya", desc: "PKM-K, Bisnis Digital, & Modul Ajar" }
+      ],
+
+      hardSkills: [
+        { name: "Microsoft Excel", level: 94, category: "Keuangan & Administrasi", desc: "Pengolahan formula statistik, analisis data, otomatisasi arus kas (cash flow), pengelolaan anggaran, dan penyusunan RAB/LPJ." },
+        { name: "Microsoft Word", level: 95, category: "Produktivitas & Dokumen", desc: "Penyusunan laporan formal akademik, proposal Program Kreativitas Mahasiswa (PKM-K), surat resmi, dan dokumentasi organisasi." },
+        { name: "Powerpoint", level: 92, category: "Presentasi & Edukasi", desc: "Perancangan slide presentasi profesional, deck pemaparan workshop kewirausahaan, dan media pembelajaran visual yang komunikatif." },
+        { name: "Canva", level: 90, category: "Desain Grafis & Branding", desc: "Perancangan identitas visual, banner promosi event, poster edukasi ekonomi, feed media sosial, dan materi publikasi kepanitiaan." },
+        { name: "Manajemen Keuangan & Anggaran", level: 89, category: "Keuangan & Akuntansi", desc: "Pencatatan pemasukan dan pengeluaran secara terstruktur, rekonsiliasi kas riil, dan akuntabilitas pelaporan pertanggungjawaban." },
+        { name: "Operasional Ritel & Usaha Mahasiswa", level: 86, category: "Kewirausahaan", desc: "Pengelolaan program jual beli offline & online (DIKMI Mart), pengadaan stok, penetapan harga jual, dan pelayanan konsumen." }
+      ],
+
+      softSkills: [
+        { name: "Komunikasi Efektif", icon: "fa-comments", badge: "Utama", desc: "Mampu menyampaikan gagasan secara runtut, persuasif, dan diplomatis kepada forum formal, pimpinan, mitra usaha, dan anggota tim." },
+        { name: "Manajemen Waktu", icon: "fa-clock", badge: "Konsisten", desc: "Terbukti mampu mempertahankan prestasi akademik IPK 3.82 di tengah intensitas tinggi kepengurusan organisasi dan kepanitiaan." },
+        { name: "Kerja Tim & Koordinasi Tim", icon: "fa-users", badge: "Kolaboratif", desc: "Berpengalaman memimpin dan menyelaraskan dinamika kerja tim kepanitiaan serta operasional usaha dengan koordinasi yang solid." },
+        { name: "Ketelitian dalam Bekerja", icon: "fa-search-plus", badge: "Akurat", desc: "Cermat dalam verifikasi bukti transaksi keuangan, pelaporan pertanggungjawaban, dan kelengkapan dokumen resmi organisasi." },
+        { name: "Kepemimpinan & Inisiatif", icon: "fa-lightbulb", badge: "Inisiatif", desc: "Peka menangkap peluang usaha baru, proaktif menawarkan solusi praktis di lapangan, dan bertanggung jawab penuh terhadap amanah." },
+        { name: "Sikap Teliti & Adaptif", icon: "fa-sync-alt", badge: "Adaptif", desc: "Mudah beradaptasi dengan lingkungan dan tantangan baru serta memiliki komitmen kuat untuk terus belajar dan mengembangkan diri." }
+      ],
+
+      education: [
+        {
+          degree: "S1 Pendidikan Ekonomi",
+          institution: "Universitas Siliwangi",
+          faculty: "Fakultas Keguruan dan Ilmu Pendidikan (FKIP)",
+          period: "2023 — sekarang",
+          gpa: "IPK 3.82 / 4.00",
+          status: "Mahasiswa Aktif",
+          description: "Mendalami bidang keilmuan pendidikan ekonomi terapan, ekonomi mikro & makro, akuntansi dasar & menengah, kewirausahaan, metodologi pembelajaran inovatif, serta manajemen koperasi dan UMKM."
+        }
+      ],
+
+      experiences: [
+        {
+          id: "hmj-dikmi",
+          role: "Divisi Kewirausahaan (2 Periode)",
+          organization: "Himpunan Mahasiswa Jurusan Pendidikan Ekonomi (HMJ DIKMI)",
+          period: "2024 — 2025",
+          type: "Organisasi Mahasiswa Fakultas",
+          scope: "Jurusan / Fakultas",
+          achievements: [
+            "Mengelola dan mengembangkan program kerja DIKMI Mart sebagai sarana jual beli mahasiswa berbasis offline dan online.",
+            "Mengoordinasikan tim dalam operasional kegiatan usaha untuk memastikan kelancaran dan keberlanjutan program.",
+            "Mengelola keuangan program secara sederhana, termasuk pencatatan pemasukan dan pengeluaran.",
+            "Mengidentifikasi dan memanfaatkan peluang usaha untuk meningkatkan efektivitas dan hasil kegiatan kewirausahaan.",
+            "Mengasah keterampilan kewirausahaan, manajemen usaha, serta kerja sama tim dalam lingkungan organisasi."
+          ]
+        },
+        {
+          id: "kopma-unsil",
+          role: "Anggota",
+          organization: "Koperasi Mahasiswa Universitas Siliwangi",
+          period: "2023 — sekarang",
+          type: "Unit Kegiatan Mahasiswa Universitas",
+          scope: "Universitas",
+          achievements: [
+            "Membangun relasi dan komunikasi yang baik dengan pengurus koperasi dalam mendukung kegiatan kewirausahaan.",
+            "Terlibat dalam kegiatan kepanitiaan yang diselenggarakan oleh KOPMA UNSIL."
+          ]
+        }
+      ],
+
+      committees: [
+        {
+          id: "ppkm-pkmk",
+          role: "Penanggung Jawab Program Kreativitas Mahasiswa Bidang Kewirausahaan (PKM-K)",
+          event: "Panitia Program Pemantapan Kaderisasi Mahasiswa (PPKM)",
+          year: "2024 & 2025",
+          scope: "Fakultas / Universitas",
+          category: "Kewirausahaan & Kaderisasi",
+          desc: "Bertanggung jawab membimbing, mengoordinasikan, dan menyusun timeline pengusulan proposal PKM Kewirausahaan bagi mahasiswa baru hingga tahap seleksi proposal."
+        },
+        {
+          id: "danus-gpe",
+          role: "Seksi Dana Usaha (Danus)",
+          event: "Panitia Gebyar Pendidikan Ekonomi",
+          year: "2024 & 2025",
+          scope: "Fakultas / Regional",
+          category: "Penggalangan Dana & Usaha",
+          desc: "Menyusun strategi penggalangan dana kreatif melalui bazar kuliner, penjualan produk merchandise, dan koordinasi penawaran sponsorship untuk mendukung pendanaan acara tahunan terbesar jurusan."
+        },
+        {
+          id: "humas-ombus",
+          role: "Seksi Hubungan Masyarakat (Humas)",
+          event: "Panitia OMBUS Pendidikan Ekonomi",
+          year: "2024 & 2025",
+          scope: "Jurusan",
+          category: "Komunikasi Publik",
+          desc: "Menjadi penghubung komunikasi utama antara panitia, dosen pembimbing, dan ratusan mahasiswa baru, serta mengelola publikasi informasi resmi orientasi akademik."
+        },
+        {
+          id: "bendahara-rakernas",
+          role: "Bendahara Pelaksana",
+          event: "Panitia Rapat Kerja Nasional (RAKERNAS)",
+          year: "2024",
+          scope: "Nasional",
+          category: "Tata Kelola Keuangan",
+          desc: "Mengelola keseluruhan perputaran anggaran dana kegiatan berskala nasional, merancang Rencana Anggaran Biaya (RAB), memverifikasi bukti transaksi, dan menyusun Laporan Pertanggungjawaban (LPJ) keuangan audit."
+        },
+        {
+          id: "pj-foe",
+          role: "Penanggung Jawab Workshop",
+          event: "Panitia Festival of Enterpreneurship (FOE)",
+          year: "2024",
+          scope: "Universitas",
+          category: "Event & Workshop",
+          desc: "Mengonsep materi workshop kewirausahaan pemuda, berkoordinasi dengan praktisi bisnis narasumber, serta mengarahkan alur teknis acara bagi 150+ peserta mahasiswa."
+        },
+        {
+          id: "ppm-unsil",
+          role: "Seksi Hubungan Masyarakat & Seksi Konsumsi",
+          event: "Panitia Pengabdian Masyarakat",
+          year: "2024 & 2025",
+          scope: "Masyarakat / Wilayah Binaan",
+          category: "Sosial & Logistik",
+          desc: "Mengoordinasikan penyediaan konsumsi higienis bagi ratusan warga dan delegasi serta menjalin relasi harmonis dengan tokoh masyarakat setempat."
+        },
+        {
+          id: "pubdekdok-kopma",
+          role: "Divisi Publikasi, Desain, dan Dokumentasi",
+          event: "Panitia Temu Anggota KOPMA UNSIL",
+          year: "2024",
+          scope: "Universitas",
+          category: "Publikasi & Desain",
+          desc: "Merancang identitas visual banner panggung, materi publikasi digital, dan mendokumentasikan jalannya seluruh rangkaian agenda temu anggota koperasi."
+        }
+      ],
+
+      projects: [
+        {
+          id: "dikmi-mart",
+          title: "Manajemen Operasional & Penjualan DIKMI Mart (Offline & Online)",
+          category: "Kewirausahaan",
+          period: "2024 — 2025",
+          tag: "Business Management & Retail",
+          shortDesc: "Pengelolaan program kerja unit usaha DIKMI Mart HMJ Pendidikan Ekonomi berbasis sarana jual beli mahasiswa offline dan online.",
+          problem: "Kebutuhan mahasiswa akan atribut perkuliahan dan konsumsi harian memerlukan sarana pengadaan terpadu, kontrol stok teratur, dan pencatatan kas transparan.",
+          solution: "Mengembangkan katalog pemesanan online, menyusun jadwal piket operasional tim, mengontrol persediaan barang berkala, dan mencatat mutasi kas secara disiplin.",
+          fullDesc: "DIKMI Mart adalah program kerja unggulan Divisi Kewirausahaan HMJ Pendidikan Ekonomi. Melalui pengelolaan yang berkelanjutan selama 2 periode, unit usaha ini berhasil memenuhi kebutuhan mahasiswa serta menghasilkan pemasukan kas mandiri bagi organisasi.",
+          tools: ["WhatsApp Business", "Microsoft Excel", "Canva", "Google Sheets"],
+          metrics: [
+            { label: "Peningkatan Omzet", value: "+35%" },
+            { label: "Item Produk Dikelola", value: "25+ SKU" },
+            { label: "Tingkat Akuntabilitas LPJ", value: "100% Valid" }
+          ]
+        },
+        {
+          id: "financial-bookkeeping",
+          title: "Sistem Tata Kelola Keuangan & LPJ RAKERNAS Nasional",
+          category: "Keuangan",
+          period: "2024",
+          tag: "Financial Accounting & Budgeting",
+          shortDesc: "Penyusunan Rencana Anggaran Biaya (RAB) terperinci, sistem verifikasi nota transaksi riil, dan penerbitan Laporan Pertanggungjawaban (LPJ) keuangan tingkat nasional.",
+          problem: "Kegiatan berskala nasional memerlukan akurasi pos pengeluaran yang ketat, pencegahan pembengkakan biaya darurat, dan audit bukti pembayaran yang sistematis.",
+          solution: "Membangun spreadsheet otomatisasi alokasi pos anggaran per divisi, menerapkan sistem validasi kwitansi bertingkat, dan menyusun buku laporan keuangan akhir yang diaudit pimpinan.",
+          fullDesc: "Bertindak sebagai Bendahara Pelaksana agenda nasional, proyek ini mencakup manajemen perputaran dana belasan juta rupiah dengan tingkat ketepatan realisasi mencapai 98.4% tanpa selisih pembukuan.",
+          tools: ["Microsoft Excel", "Spreadsheet Otomasi", "Digital PDF Archiving"],
+          metrics: [
+            { label: "Realisasi Anggaran", value: "98.4%" },
+            { label: "Selisih Pembukuan", value: "Rp 0 (Nol)" },
+            { label: "Bukti Transaksi Terarsip", value: "150+ Berkas" }
+          ]
+        },
+        {
+          id: "pkm-kewirausahaan",
+          title: "Rencana Bisnis Inovatif Proposal PKM-K (Kewirausahaan Kreatif)",
+          category: "Kewirausahaan",
+          period: "2024 & 2025",
+          tag: "Business Research & Feasibility",
+          shortDesc: "Penyusunan dan pendampingan proposal bisnis inovatif mahasiswa berbasis analisis kelayakan pasar, studi finansial BEP/ROI, dan strategi pemasaran.",
+          problem: "Tingginya minat wirausaha mahasiswa baru memerlukan arahan sistematis dalam merumuskan model bisnis, proyeksi arus kas, dan nilai kebaruan produk.",
+          solution: "Merumuskan Business Model Canvas (BMC), menghitung proyeksi Cash Flow dan titik impas (Break Even Point), serta membimbing mahasiswa dalam penyusunan proposal PKM-K.",
+          fullDesc: "Sebagai PJ PKM-K pada program PPKM, program ini memadukan riset pasar lokal di Kota Tasikmalaya dengan perencanaan finansial yang matang dan berdaya saing.",
+          tools: ["Business Model Canvas (BMC)", "Analisis SWOT", "Microsoft Word", "Canva"],
+          metrics: [
+            { label: "Skor Penilaian Reviewer", value: "88 / 100" },
+            { label: "Responden Validasi", value: "100+ Orang" },
+            { label: "Proyeksi Margin Laba", value: "40%" }
+          ]
+        },
+        {
+          id: "foe-branding",
+          title: "Konsep & Pelaksanaan Workshop Festival of Enterpreneurship (FOE)",
+          category: "Desain & Event",
+          period: "2024",
+          tag: "Event Management & Workshop",
+          shortDesc: "Pengonsepan materi workshop kewirausahaan muda, koordinasi pembicara bisnis, materi presentasi visual, dan booklet panduan peserta.",
+          problem: "Perlunya meningkatkan minat dan keterampilan wirausaha praktis mahasiswa melalui workshop interaktif dan materi yang aplikatif.",
+          solution: "Menyusun kurikulum materi workshop, merancang slide presentasi PowerPoint komunikatif, mendampingi narasumber, dan mengarahkan teknis acara.",
+          fullDesc: "Sebagai Penanggung Jawab Workshop FOE 2024, kegiatan ini berhasil memfasilitasi lebih dari 150 peserta mahasiswa dengan tingkat kepuasan peserta yang tinggi.",
+          tools: ["Powerpoint", "Canva", "Microsoft Word", "Event Coordination"],
+          metrics: [
+            { label: "Total Peserta Workshop", value: "150+ Peserta" },
+            { label: "Peningkatan Engagement", value: "+45%" },
+            { label: "Aset Grafis Diproduksi", value: "20+ Desain" }
+          ]
+        },
+        {
+          id: "economic-learning-module",
+          title: "Modul Ajar Interaktif Ekonomi & Media Pembelajaran Kontekstual",
+          category: "Edukasi",
+          period: "2024 — 2025",
+          tag: "Pedagogy & Digital Learning",
+          shortDesc: "Pengembangan bahan ajar materi Struktur Pasar & Kewirausahaan Digital untuk jenjang pendidikan dengan pendekatan kontekstual berbasis studi kasus riil.",
+          problem: "Materi ekonomi sering dianggap teoritis jika hanya disampaikan melalui teks konvensional tanpa ilustrasi studi kasus dunia usaha riil.",
+          solution: "Menyusun modul interaktif berilustrasi infografis, studi kasus UMKM lokal, dan lembar kerja evaluasi kuis yang aplikatif.",
+          fullDesc: "Dirancang sebagai wujud kompetensi calon pendidik ekonomi masa depan. Modul ini memperoleh penilaian evaluasi 4.8/5.0 dan siap diterapkan sebagai media ajar.",
+          tools: ["Microsoft Word", "Powerpoint", "Canva", "Google Forms Quiz"],
+          metrics: [
+            { label: "Jumlah Halaman Materi", value: "45 Halaman" },
+            { label: "Rating Evaluasi Pengguna", value: "4.8 / 5.0" },
+            { label: "Kesesuaian Kurikulum", value: "Kurikulum Merdeka" }
+          ]
+        },
+        {
+          id: "florist-lifestyle-shop",
+          title: "Simulasi Usaha Ritel & Hampers Mahasiswa 'Bloom & Grace'",
+          category: "Kewirausahaan",
+          period: "2024",
+          tag: "Creative Enterprise & E-Commerce",
+          shortDesc: "Rancangan bisnis buket & kado kelulusan mahasiswa dengan kalkulasi Harga Pokok Penjualan (HPP) dan strategi pemasaran pre-order momen wisuda.",
+          problem: "Tingginya permintaan produk kado wisuda di lingkungan kampus yang memerlukan kejelasan estimasi biaya produksi, margin keuntungan, dan kemasan menarik.",
+          solution: "Menghitung HPP per unit di Microsoft Excel, merancang katalog visual di Canva, dan menyusun strategi pemasaran berkala.",
+          fullDesc: "Model bisnis yang mengintegrasikan aspek estetika visual dengan kalkulasi akuntansi biaya riil sehingga menjamin keuntungan yang sehat dan kepuasan pembeli.",
+          tools: ["Microsoft Excel", "Canva", "WhatsApp Business"],
+          metrics: [
+            { label: "Estimasi Margin Profit", value: "38% - 42%" },
+            { label: "Varian Katalog Produk", value: "12 Varian" },
+            { label: "Sistem Pemesanan", value: "Pre-Order Berkelanjutan" }
+          ]
+        }
+      ],
+
+      certificates: [
+        {
+          id: "cert-1",
+          title: "Sertifikat Pengurus Divisi Kewirausahaan (2 Periode)",
+          issuer: "Himpunan Mahasiswa Jurusan Pendidikan Ekonomi (HMJ DIKMI UNSIL)",
+          year: "2024 — 2025",
+          category: "Kepemimpinan & Organisasi",
+          desc: "Penghargaan atas dedikasi dan kontribusi aktif selama dua periode dalam pengelolaan unit usaha mandiri mahasiswa DIKMI Mart.",
+          credential: "Terverifikasi Resmi Jurusan"
+        },
+        {
+          id: "cert-2",
+          title: "Sertifikat Bendahara Pelaksana RAKERNAS Pendidikan Ekonomi",
+          issuer: "Ikatan Mahasiswa Pendidikan Ekonomi Indonesia (IMAPESI) & UNSIL",
+          year: "2024",
+          category: "Tata Kelola Keuangan",
+          desc: "Apresiasi atas keberhasilan manajemen anggaran, pencatatan transaksi, dan pelaporan pertanggungjawaban keuangan skala nasional.",
+          credential: "Tingkat Nasional"
+        },
+        {
+          id: "cert-3",
+          title: "Sertifikat Penanggung Jawab Workshop Festival of Enterpreneurship",
+          issuer: "Panitia Festival of Enterpreneurship Universitas Siliwangi",
+          year: "2024",
+          category: "Kewirausahaan & Acara",
+          desc: "Penghargaan atas dedikasi dalam perencanaan konsep, koordinasi narasumber, dan eksekusi workshop kewirausahaan muda.",
+          credential: "Tingkat Universitas"
+        },
+        {
+          id: "cert-4",
+          title: "Sertifikat Penguasaan Aplikasi Perkantoran & Desain (Office & Canva)",
+          issuer: "Pusat Studi IT & Pendidikan Ekonomi",
+          year: "2023 — 2024",
+          category: "Kompetensi Teknis",
+          desc: "Penguasaan komprehensif perangkat Microsoft Excel, Word, PowerPoint, dan Canva untuk kebutuhan administrasi serta publikasi profesional.",
+          credential: "Keahlian Teruji"
+        }
+      ],
+
+      contactTemplates: [
+        {
+          id: "internship",
+          label: "Tawaran Magang / Kerja",
+          subject: "Peluang Magang / Rekrutmen Mahasiswa Berprestasi",
+          message: "Halo Ade Sri Rahayu, kami tertarik dengan rekam jejak akademik (IPK 3.82) dan kepemimpinan organisasi Anda di bidang keuangan & kewirausahaan. Kami ingin mendiskusikan peluang magang / kolaborasi profesional."
+        },
+        {
+          id: "business",
+          label: "Kolaborasi Bisnis / UMKM",
+          subject: "Diskusi Kerja Sama Usaha / Kemitraan Komersial",
+          message: "Halo Ade Sri, saya melihat portofolio pengelolaan DIKMI Mart dan inisiatif kewirausahaan Anda. Saya ingin mengajak berdiskusi mengenai potensi kerja sama bisnis / proyek UMKM."
+        },
+        {
+          id: "speaker",
+          label: "Undangan Pemateri / Workshop",
+          subject: "Undangan Pengisi Acara / Workshop Kewirausahaan",
+          message: "Halo Ade Sri, kami dari panitia ingin mengundang Anda untuk berbagi pengalaman seputar manajemen organisasi, pembukuan keuangan, atau program PKM-K dalam acara kami."
+        },
+        {
+          id: "academic",
+          label: "Diskusi Akademik / Riset",
+          subject: "Diskusi Riset Pendidikan Ekonomi & Kewirausahaan",
+          message: "Halo Ade Sri Rahayu, saya ingin bertukar pikiran dan mendiskusikan topik riset atau proyek pembelajaran ekonomi digital."
+        }
+      ]
+    };
+
+    // === KOMPONEN REACT ===
+
+    // 1. NAVBAR
+    function Navbar({ onOpenCV, darkMode, setDarkMode }) {
+      const [isScrolled, setIsScrolled] = useState(false);
+      const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+      const [activeSection, setActiveSection] = useState('beranda');
+      const [scrollProgress, setScrollProgress] = useState(0);
+
+      useEffect(() => {
+        const handleScroll = () => {
+          setIsScrolled(window.scrollY > 20);
+          const totalHeight = document.documentElement.scrollHeight - window.innerHeight;
+          if (totalHeight > 0) {
+            setScrollProgress((window.scrollY / totalHeight) * 100);
+          }
+          const sections = ['beranda', 'tentang', 'pengalaman', 'portofolio', 'sertifikat', 'kontak'];
+          const pos = window.scrollY + 220;
+          for (const s of sections) {
+            const el = document.getElementById(s);
+            if (el && pos >= el.offsetTop && pos < el.offsetTop + el.offsetHeight) {
+              setActiveSection(s);
+              break;
+            }
+          }
+        };
+        window.addEventListener('scroll', handleScroll, { passive: true });
+        return () => window.removeEventListener('scroll', handleScroll);
+      }, []);
+
+      const navLinks = [
+        { href: '#beranda', label: 'Beranda' },
+        { href: '#tentang', label: 'Profil' },
+        { href: '#pengalaman', label: 'Pengalaman' },
+        { href: '#portofolio', label: 'Portofolio' },
+        { href: '#sertifikat', label: 'Sertifikat' },
+        { href: '#kontak', label: 'Kontak' },
+      ];
+
+      return (
+        <>
+          <div className="reading-progress-bar no-print" style={{ width: `${scrollProgress}%` }} aria-hidden="true" />
+          <header className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 no-print ${isScrolled ? 'glass-nav shadow-sm py-3' : 'bg-transparent py-5'}`}>
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+              <div className="flex items-center justify-between">
+                
+                <a href="#beranda" className="flex items-center gap-2 group" title="Kembali ke Beranda">
+                  <div className="flex flex-col">
+                    <span className="font-display font-bold text-2xl tracking-tight text-slate-900 dark:text-white leading-none">
+                      Ade<span className="text-rose-600 dark:text-rose-400">Sri.</span>
+                    </span>
+                    <span className="text-[10px] tracking-widest uppercase font-semibold text-slate-500 dark:text-slate-400 mt-1">
+                      Pendidikan Ekonomi UNSIL
+                    </span>
+                  </div>
+                </a>
+
+                <nav className="hidden lg:flex items-center space-x-1 bg-white/85 dark:bg-slate-900/85 backdrop-blur-md px-3 py-1.5 rounded-full border border-rose-100 dark:border-slate-800 shadow-xs">
+                  {navLinks.map((link) => {
+                    const isActive = activeSection === link.href.substring(1);
+                    return (
+                      <a
+                        key={link.href}
+                        href={link.href}
+                        className={`px-3.5 py-1.5 rounded-full text-xs font-semibold uppercase tracking-wider transition-all duration-200 ${
+                          isActive
+                            ? 'bg-rose-700 text-white shadow-sm'
+                            : 'text-slate-700 dark:text-slate-300 hover:text-rose-600 dark:hover:text-rose-400 hover:bg-rose-50/80 dark:hover:bg-slate-800'
+                        }`}
+                      >
+                        {link.label}
+                      </a>
+                    );
+                  })}
+                </nav>
+
+                <div className="flex items-center gap-2.5 sm:gap-3">
+                  <button
+                    onClick={onOpenCV}
+                    className="hidden sm:inline-flex items-center gap-2 px-4 py-2 rounded-full text-xs font-bold uppercase tracking-wider text-rose-700 dark:text-rose-300 bg-rose-50 dark:bg-rose-950/50 border border-rose-200 dark:border-rose-800/60 hover:bg-rose-700 hover:text-white dark:hover:bg-rose-700 dark:hover:text-white transition-all shadow-xs"
+                    title="Buka Curriculum Vitae Resmi"
+                  >
+                    <i className="fas fa-file-invoice text-xs"></i>
+                    <span>Lihat CV</span>
+                  </button>
+
+                  <button
+                    onClick={() => setDarkMode(!darkMode)}
+                    className="w-10 h-10 rounded-full flex items-center justify-center text-slate-700 dark:text-slate-200 bg-white/80 dark:bg-slate-800 border border-rose-100 dark:border-slate-700 hover:bg-rose-50 dark:hover:bg-slate-700 transition-colors shadow-xs"
+                    aria-label="Ubah Tema Warna"
+                    title={darkMode ? "Beralih ke Tema Terang" : "Beralih ke Tema Gelap"}
+                  >
+                    {darkMode ? <i className="fas fa-sun text-amber-400 text-sm"></i> : <i className="fas fa-moon text-rose-700 text-sm"></i>}
+                  </button>
+
+                  <button
+                    onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+                    className="lg:hidden w-10 h-10 rounded-full flex items-center justify-center text-slate-800 dark:text-slate-200 bg-white/80 dark:bg-slate-800 border border-rose-100 dark:border-slate-700 hover:bg-rose-50 transition-colors shadow-xs"
+                    aria-label="Buka Menu"
+                  >
+                    <i className={`fas ${mobileMenuOpen ? 'fa-times' : 'fa-bars'} text-base`}></i>
+                  </button>
+                </div>
+
+              </div>
+            </div>
+
+            {mobileMenuOpen && (
+              <div className="lg:hidden mt-3 px-4 pt-3 pb-6 bg-white/98 dark:bg-slate-900/98 backdrop-blur-xl border-b border-rose-100 dark:border-slate-800 shadow-2xl transition-all">
+                <div className="flex flex-col space-y-1">
+                  {navLinks.map((link) => {
+                    const isActive = activeSection === link.href.substring(1);
+                    return (
+                      <a
+                        key={link.href}
+                        href={link.href}
+                        onClick={() => setMobileMenuOpen(false)}
+                        className={`px-4 py-2.5 rounded-xl text-xs font-bold uppercase tracking-wider flex items-center justify-between transition-colors ${
+                          isActive
+                            ? 'bg-rose-700 text-white shadow-sm'
+                            : 'text-slate-700 dark:text-slate-200 hover:bg-rose-50 dark:hover:bg-slate-800'
+                        }`}
+                      >
+                        <span>{link.label}</span>
+                        {isActive && <i className="fas fa-check text-xs"></i>}
+                      </a>
+                    );
+                  })}
+                  <div className="pt-3 mt-2 border-t border-rose-100 dark:border-slate-800">
+                    <button
+                      onClick={() => { setMobileMenuOpen(false); onOpenCV(); }}
+                      className="w-full py-3 rounded-xl text-center text-xs font-bold uppercase tracking-wider bg-rose-700 text-white shadow-md flex items-center justify-center gap-2"
+                    >
+                      <i className="fas fa-file-invoice"></i>
+                      <span>Buka & Unduh Curriculum Vitae</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            )}
+          </header>
+        </>
+      );
+    }
+
+    // 2. HERO (PORTOFOLIO ADE SRI RAHAYU - DYNAMIC ANIMATED TEXT & REVOLVING ORBIT AVATAR)
+    function Hero({ personal }) {
+      const photoSrc = personal?.photoHeroUrl || personal?.photoUrl || './assets/ade-hero.jpg';
+
+      return (
+        <section id="beranda" className="relative pt-28 pb-6 sm:pb-8 flex items-center justify-center overflow-hidden">
+          {/* Background Decorative Ambient Glows & Dot Texture */}
+          <div className="absolute inset-0 bg-[radial-gradient(#f43f5e15_1px,transparent_1px)] [background-size:28px_28px] pointer-events-none -z-10"></div>
+          <div className="absolute top-1/4 left-1/4 -translate-x-1/2 w-[500px] h-[500px] bg-rose-200/40 dark:bg-rose-900/20 rounded-full blur-[120px] pointer-events-none -z-10"></div>
+          <div className="absolute bottom-10 right-1/4 w-[450px] h-[450px] bg-amber-100/40 dark:bg-amber-900/15 rounded-full blur-[100px] pointer-events-none -z-10"></div>
+
+          <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+            {/* Compact, cohesive container with balanced spacing */}
+            <div className="flex flex-col lg:flex-row items-center justify-center gap-10 lg:gap-16 py-4">
+              
+              {/* Left Column: Typography & Animated Identity */}
+              <div className="flex-1 text-center lg:text-left max-w-xl">
+                
+                {/* Top Minimal Pill Tag */}
+                <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-rose-50 dark:bg-slate-800/90 border border-rose-200 dark:border-slate-700 shadow-xs mb-4 animate-float-text">
+                  <span className="text-rose-600 dark:text-rose-400 text-xs animate-twinkle">✦</span>
+                  <span className="text-[11px] sm:text-xs font-bold uppercase tracking-widest text-rose-800 dark:text-rose-300">
+                    Official Portfolio
+                  </span>
+                  <i className="fas fa-heart text-rose-500 text-xs"></i>
+                </div>
+
+                {/* PORTOFOLIO Title - Bold, Animated Motion Gradient & Subtle Float */}
+                <h1 className="font-poster text-6xl sm:text-7xl lg:text-8xl font-black uppercase tracking-wider bg-gradient-to-r from-rose-700 via-pink-600 to-rose-700 dark:from-rose-500 dark:via-pink-300 dark:to-rose-500 bg-clip-text text-transparent leading-[0.9] mb-3 animate-gradient-text animate-float-text select-none drop-shadow-xs">
+                  PORTOFOLIO
+                </h1>
+
+                {/* Name - Elegant Animated Gradient Text */}
+                <h2 className="font-display text-4xl sm:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-slate-900 via-rose-900 to-slate-900 dark:from-white dark:via-rose-300 dark:to-white bg-clip-text text-transparent leading-tight mb-4 inline-block animate-gradient-text transition-transform duration-300 hover:scale-105">
+                  {personal.name}
+                </h2>
+
+                {/* Accent Line with Diamond Star */}
+                <div className="flex items-center justify-center lg:justify-start gap-2 mb-6">
+                  <div className="w-16 h-1 bg-gradient-to-r from-rose-700 to-amber-500 rounded-full"></div>
+                  <span className="text-rose-600 text-xs animate-twinkle">✦</span>
+                  <div className="w-8 h-1 bg-rose-200 dark:bg-slate-700 rounded-full"></div>
+                </div>
+
+                {/* Academic Info Card */}
+                <div className="inline-flex flex-col sm:flex-row items-center lg:items-start gap-2 sm:gap-4 p-3.5 sm:px-5 sm:py-3 rounded-2xl bg-white/80 dark:bg-slate-800/80 border border-rose-100 dark:border-slate-700/80 shadow-sm backdrop-blur-sm">
+                  <div className="flex items-center gap-3">
+                    <div className="w-10 h-10 rounded-xl bg-gradient-to-tr from-rose-600 to-pink-500 text-white flex items-center justify-center text-sm shadow-xs flex-shrink-0">
+                      <i className="fas fa-graduation-cap"></i>
+                    </div>
+                    <div className="text-left">
+                      <div className="text-base sm:text-lg font-bold text-slate-900 dark:text-white leading-tight">
+                        Pendidikan Ekonomi
+                      </div>
+                      <div className="text-xs sm:text-sm font-semibold text-rose-700 dark:text-rose-400">
+                        Universitas Siliwangi
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+
+              {/* Right Column: Enlarged Animated Circular Avatar (Yellow Almamater Studio Photo) with Orbiting Love & Stars */}
+              <div className="flex-1 flex justify-center items-center relative">
+                <div className="relative w-80 h-80 sm:w-96 sm:h-96 md:w-[420px] md:h-[420px] flex items-center justify-center">
+                  
+                  {/* Outer Pulsing Glow */}
+                  <div className="absolute inset-2 rounded-full bg-gradient-to-tr from-rose-300/40 via-pink-200/30 to-amber-200/30 blur-2xl animate-pulse-glow pointer-events-none"></div>
+
+                  {/* Dashed Orbit Ring with Exactly 3 Icons (1 Love, 2 Stars) Revolving on the Dashed Track */}
+                  <div className="absolute inset-0 rounded-full border-2 border-dashed border-rose-300/70 dark:border-rose-800/50 pointer-events-none animate-orbit z-20">
+                    
+                    {/* 1. Top (0 deg): Simple Heart */}
+                    <div className="absolute inset-0 transform rotate-0 pointer-events-none">
+                      <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2">
+                        <div className="w-8 h-8 rounded-full bg-white dark:bg-slate-800 shadow-lg border border-rose-200 dark:border-slate-700 flex items-center justify-center text-rose-600 dark:text-rose-400 text-sm animate-counter-rotate">
+                          <i className="fas fa-heart"></i>
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* 2. Bottom-Right (120 deg): Golden Star */}
+                    <div className="absolute inset-0 transform rotate-[120deg] pointer-events-none">
+                      <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2">
+                        <div className="w-7 h-7 rounded-full bg-white dark:bg-slate-800 shadow-md border border-amber-200 dark:border-slate-700 flex items-center justify-center text-amber-500 text-xs animate-counter-rotate">
+                          <i className="fas fa-star"></i>
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* 3. Bottom-Left (240 deg): Diamond Sparkle Star */}
+                    <div className="absolute inset-0 transform rotate-[240deg] pointer-events-none">
+                      <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2">
+                        <div className="w-7 h-7 rounded-full bg-white dark:bg-slate-800 shadow-md border border-rose-200 dark:border-slate-700 flex items-center justify-center text-rose-500 text-xs font-bold animate-counter-rotate">
+                          ✦
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+
+                  {/* Animated Floating Circle Frame - Enlarged with Rich Presence */}
+                  <div className="relative w-72 h-72 sm:w-84 sm:h-84 md:w-[370px] md:h-[370px] rounded-full bg-gradient-to-tr from-rose-200 via-pink-100 to-amber-100 dark:from-slate-800 dark:to-slate-900 p-3.5 sm:p-4 shadow-2xl border-4 border-white dark:border-slate-700 animate-float-circle z-10">
+                    
+                    {/* Inner Concentric Circle */}
+                    <div className="relative w-full h-full rounded-full bg-gradient-to-b from-rose-50 via-pink-50/70 to-rose-100 dark:from-slate-800 dark:to-slate-900 p-2 overflow-hidden flex items-center justify-center shadow-inner border border-rose-200 dark:border-slate-700">
+                      
+                      {/* Subject Portrait Image - NEW STUDIO YELLOW ALMAMATER PHOTO IN CENTERED ZOOMED HALF-BODY */}
+                      <img
+                        src={photoSrc}
+                        alt={personal.name}
+                        className="w-full h-full rounded-full object-cover object-[center_18%] scale-[1.25] transition-transform duration-500 hover:scale-[1.32]"
+                        onError={(e) => {
+                          e.target.onerror = null;
+                          e.target.src = './assets/ade-hero.jpg';
+                        }}
+                      />
+
+                      {/* Sparkling Stars Accents inside the Circle */}
+                      <div className="absolute top-4 left-5 text-rose-600 dark:text-rose-400 text-lg font-bold animate-twinkle pointer-events-none select-none">
+                        ✦
+                      </div>
+                      <div className="absolute top-5 right-5 text-amber-500 dark:text-amber-400 text-xl font-bold animate-twinkle-delay pointer-events-none select-none">
+                        ★
+                      </div>
+
+                    </div>
+
+                  </div>
+
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </section>
+      );
+    }
+
+    // 3. STATS
+    function Stats({ stats }) {
+      return (
+        <section className="pt-0 pb-10 -mt-4 sm:-mt-6 lg:-mt-8 relative z-20">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
+              {stats.map((item, idx) => (
+                <div
+                  key={idx}
+                  className="bg-white/95 dark:bg-slate-900/90 backdrop-blur-md p-6 rounded-3xl border border-rose-100 dark:border-slate-800 shadow-sm hover:shadow-xl hover:border-rose-300 dark:hover:border-rose-800 transition-all duration-300 transform hover:-translate-y-1 text-center group"
+                >
+                  <div className="flex items-baseline justify-center gap-1.5 mb-1.5">
+                    <span className="font-display text-3xl sm:text-4xl font-bold text-rose-700 dark:text-rose-400 group-hover:scale-105 transition-transform">
+                      {item.value}
+                    </span>
+                    <span className="text-xs font-bold uppercase tracking-wider text-amber-600 dark:text-amber-400">
+                      {item.unit}
+                    </span>
+                  </div>
+                  <h4 className="text-xs sm:text-sm font-bold text-slate-900 dark:text-white mb-1">
+                    {item.label}
+                  </h4>
+                  <p className="text-[11px] sm:text-xs text-slate-500 dark:text-slate-400 font-medium leading-relaxed">
+                    {item.desc}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+      );
+    }
+
+    // 4. ABOUT (ABOUT ME - CLEAN PROFILE & DIRECT CONNECT)
+    function About({ personal, onOpenCV, onShowToast }) {
+      const [copiedKey, setCopiedKey] = useState(null);
+      const photoSrc = personal?.photoAboutUrl || personal?.photoUrl || './assets/ade-about.jpg';
+
+      const copyToClipboard = (text, key, label) => {
+        navigator.clipboard.writeText(text);
+        setCopiedKey(key);
+        if (onShowToast) {
+          onShowToast(`${label} berhasil disalin ke clipboard!`);
+        }
+        setTimeout(() => setCopiedKey(null), 2500);
+      };
+
+      const igUrl = personal?.socials?.instagram || "https://www.instagram.com/adsrhyu_20?igsh=a3E1anU3ejJtaTlw&igsi=a3E1anU3ejJtaTlw";
+      const linkedInUrl = personal?.socials?.linkedin || "https://www.linkedin.com/in/ade-sri-rahayu-8b783935a?utm_source=share_via&utm_content=profile&utm_medium=member_android";
+      const waUrl = personal?.socials?.whatsapp || `https://wa.me/${personal.whatsapp}?text=Halo%20Ade%20Sri%20Rahayu,%20kami%20tertarik%20dengan%20kualifikasi%20Anda.`;
+
+      return (
+        <section id="tentang" className="pt-8 sm:pt-10 pb-8 sm:pb-10 bg-white/60 dark:bg-slate-900/40 relative">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            {/* Section Header - Prominent Large "About Me" Title with compact bottom gap */}
+            <div className="text-center max-w-3xl mx-auto mb-5 sm:mb-6">
+              <h2 className="text-4xl sm:text-5xl lg:text-6xl font-display font-extrabold text-slate-900 dark:text-white tracking-tight mb-2">
+                About <span className="bg-gradient-to-r from-rose-700 via-pink-600 to-rose-700 dark:from-rose-400 dark:via-pink-300 dark:to-rose-400 bg-clip-text text-transparent animate-gradient-text">Me</span>
+              </h2>
+              <div className="w-16 h-1 bg-gradient-to-r from-rose-700 to-amber-500 mx-auto rounded-full"></div>
+            </div>
+
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+              
+              {/* Left Column: Portrait Photo with Glowing Light & Moving Border (Framed slightly smaller & shifted upward) */}
+              <div className="lg:col-span-5 flex flex-col items-center">
+                
+                {/* Outer Wrapper with Ambient Bright Glow & Animated Moving Line (Slightly smaller & raised up) */}
+                <div className="relative w-56 sm:w-64 md:w-72 -mt-2 sm:-mt-5 flex flex-col items-center">
+                  
+                  {/* Ambient Bright Glow Effect */}
+                  <div className="absolute -inset-2.5 rounded-[28px] bg-gradient-to-tr from-rose-400/40 via-pink-300/30 to-amber-300/30 blur-xl animate-pulse-glow pointer-events-none"></div>
+
+                  {/* Moving Dashed Orbit Border Line */}
+                  <div className="absolute -inset-1.5 rounded-[26px] border-2 border-dashed border-rose-300/80 dark:border-rose-700/60 pointer-events-none animate-spin-slow"></div>
+
+                  {/* Main Photo Card - Balanced Dimension */}
+                  <div className="relative w-full rounded-2xl sm:rounded-3xl p-3 sm:p-3.5 bg-white/95 dark:bg-slate-800/95 border-2 border-white dark:border-slate-700 shadow-xl backdrop-blur-md animate-float-circle z-10">
+                    
+                    <div className="relative w-full h-72 sm:h-80 md:h-[340px] rounded-xl sm:rounded-2xl overflow-hidden bg-slate-900 shadow-inner">
+                      <img
+                        src={photoSrc}
+                        alt={personal.name}
+                        className="w-full h-full object-cover object-top hover:scale-105 transition-transform duration-500"
+                        onError={(e) => {
+                          e.target.onerror = null;
+                          e.target.src = './assets/ade-about.jpg';
+                        }}
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-slate-950/75 via-transparent to-transparent pointer-events-none"></div>
+                      
+                      {/* Sparkle Twinkles in Photo Corners */}
+                      <div className="absolute top-3 left-3 text-rose-500 dark:text-rose-400 text-sm font-bold animate-twinkle pointer-events-none select-none">✦</div>
+                      <div className="absolute top-3.5 right-3.5 text-amber-400 text-base font-bold animate-twinkle-delay pointer-events-none select-none">★</div>
+
+                      <div className="absolute bottom-3 inset-x-3 text-center text-white">
+                        <p className="text-xs font-bold uppercase tracking-wider">{personal.name}</p>
+                        <p className="text-[10px] text-amber-300 font-medium">Universitas Siliwangi</p>
+                      </div>
+                    </div>
+
+                    {/* Restored IPK Status Badge Below Photo */}
+                    <div className="mt-3 py-1.5 sm:py-2 px-3.5 rounded-xl bg-rose-50/90 dark:bg-slate-900/90 border border-rose-200/80 dark:border-slate-700 flex items-center justify-center gap-2 text-[11px] sm:text-xs font-bold text-slate-800 dark:text-slate-200 shadow-xs">
+                      <span className="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse"></span>
+                      <span>IPK {personal.gpa} • Siap Berkontribusi</span>
+                    </div>
+
+                  </div>
+
+                </div>
+
+                {/* Direct Social Media Links (WA, IG, LinkedIn) */}
+                <div className="w-full max-w-[260px] sm:max-w-xs mt-4 sm:mt-5 flex items-center justify-center gap-2.5 z-10">
+                  {/* WhatsApp Link */}
+                  <a
+                    href={waUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex-1 py-2.5 px-3 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold flex items-center justify-center gap-2 shadow-sm hover:shadow-md transition-all transform hover:-translate-y-0.5"
+                    title="Hubungi via WhatsApp"
+                  >
+                    <i className="fab fa-whatsapp text-sm"></i>
+                    <span>WhatsApp</span>
+                  </a>
+
+                  {/* Instagram Link */}
+                  <a
+                    href={igUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex-1 py-2.5 px-3 rounded-xl bg-gradient-to-r from-purple-600 via-pink-600 to-rose-600 hover:opacity-90 text-white text-xs font-bold flex items-center justify-center gap-2 shadow-sm hover:shadow-md transition-all transform hover:-translate-y-0.5"
+                    title="Buka Instagram"
+                  >
+                    <i className="fab fa-instagram text-sm"></i>
+                    <span>Instagram</span>
+                  </a>
+
+                  {/* LinkedIn Link */}
+                  <a
+                    href={linkedInUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex-1 py-2.5 px-3 rounded-xl bg-[#0A66C2] hover:bg-[#084e96] text-white text-xs font-bold flex items-center justify-center gap-2 shadow-sm hover:shadow-md transition-all transform hover:-translate-y-0.5"
+                    title="Buka LinkedIn Profile"
+                  >
+                    <i className="fab fa-linkedin text-sm"></i>
+                    <span>LinkedIn</span>
+                  </a>
+                </div>
+
+              </div>
+
+              {/* Right Column: Narrative "Hi, I'm Ade Sri Rahayu" (Shifted upward with tighter gap to title) */}
+              <div className="lg:col-span-7 -mt-2 sm:-mt-5">
+                
+                {/* Header Greeting - Larger "Hi," shifted close to title */}
+                <div className="mb-3 sm:mb-4">
+                  <span className="font-display text-2xl sm:text-3xl font-extrabold text-rose-700 dark:text-rose-400 leading-none">
+                    Hi,
+                  </span>
+                  <h3 className="font-display text-3xl sm:text-4xl lg:text-5xl text-slate-900 dark:text-white font-bold mt-1 tracking-tight">
+                    I'm <span className="text-rose-700 dark:text-rose-400">{personal.name}</span>
+                  </h3>
+                  <p className="text-xs sm:text-sm font-semibold text-slate-600 dark:text-slate-300 mt-1">
+                    Pendidikan Ekonomi • Universitas Siliwangi
+                  </p>
+                </div>
+
+                {/* Concise Recruiter Pitch without repetitive IPK */}
+                <div className="p-5 sm:p-6 rounded-2xl bg-white dark:bg-slate-800 border border-rose-100 dark:border-slate-700 shadow-xs mb-5">
+                  <p className="text-xs sm:text-sm text-slate-700 dark:text-slate-200 leading-relaxed text-justify mb-3 sm:mb-4">
+                    {personal.bio}
+                  </p>
+                  <div className="pt-3.5 border-t border-slate-100 dark:border-slate-700/80 flex items-center gap-2.5 text-xs font-semibold text-rose-700 dark:text-rose-300">
+                    <i className="fas fa-check-circle text-emerald-500 text-sm"></i>
+                    <span>{personal.hrPromise || "Siap memberikan kinerja prima, ketelitian administratif, dan kepemimpinan adaptif."}</span>
+                  </div>
+                </div>
+
+                {/* Quick Contact & CV Actions */}
+                <div className="flex flex-wrap items-center gap-3">
+                  <button
+                    onClick={onOpenCV}
+                    className="px-6 py-3 rounded-xl bg-rose-700 hover:bg-rose-800 text-white text-xs font-bold flex items-center gap-2 shadow-sm transition-all"
+                  >
+                    <i className="fas fa-file-invoice"></i>
+                    <span>Buka / Unduh CV</span>
+                  </button>
+
+                  <a
+                    href={`mailto:${personal.email}?subject=Peluang%20Kolaborasi%20/%20Karier%20-%20Ade%20Sri%20Rahayu`}
+                    className="px-5 py-3 rounded-xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-200 hover:text-rose-700 dark:hover:text-rose-400 hover:border-rose-300 dark:hover:border-rose-800 text-xs font-bold flex items-center gap-2 shadow-2xs transition-all transform hover:-translate-y-0.5"
+                    title="Kirim Pesan Email Langsung"
+                  >
+                    <i className="fas fa-paper-plane text-rose-600 dark:text-rose-400"></i>
+                    <span>{personal.email}</span>
+                  </a>
+                </div>
+
+              </div>
+
+            </div>
+          </div>
+        </section>
+      );
+    }
+
+
+
+    // 6. EXPERIENCE
+    function Experience({ experiences, committees }) {
+      // 4 Documentation photos for HMJ DIKMI without text
+      const hmjPhotos = [
+        './assets/ade-hero.jpg',
+        './assets/ade-about.jpg',
+        './assets/ade-yellow.jpg',
+        './assets/ade-white.jpg'
+      ];
+
+      return (
+        <section id="pengalaman" className="pt-6 sm:pt-8 pb-16 sm:pb-20 bg-white dark:bg-slate-900 relative">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            {/* Section Header (in English) */}
+            <div className="text-center max-w-3xl mx-auto mb-8 sm:mb-10">
+              <span className="text-xs font-bold uppercase tracking-widest text-rose-700 dark:text-rose-400 bg-rose-50 dark:bg-rose-950/50 px-4 py-1.5 rounded-full border border-rose-200 dark:border-slate-800 inline-block mb-3 shadow-xs">
+                Leadership & Activities
+              </span>
+              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-display font-extrabold text-slate-900 dark:text-white tracking-tight mb-3">
+                Organizational & <span className="bg-gradient-to-r from-rose-700 via-pink-600 to-rose-700 dark:from-rose-400 dark:via-pink-300 dark:to-rose-400 bg-clip-text text-transparent">Committee Experience</span>
+              </h2>
+              <div className="w-16 h-1 bg-gradient-to-r from-rose-700 to-amber-500 mx-auto rounded-full"></div>
+            </div>
+
+            {/* 1. ORGANIZATIONAL EXPERIENCE */}
+            <div className="mb-14 sm:mb-16">
+              
+              {/* Subsection Title (in English) */}
+              <div className="flex items-center justify-between pb-4 mb-8 border-b border-rose-100 dark:border-slate-800">
+                <div className="flex items-center gap-3">
+                  <div className="w-10 h-10 rounded-xl bg-rose-100 dark:bg-rose-950 text-rose-700 dark:text-rose-400 flex items-center justify-center text-lg shadow-xs">
+                    <i className="fas fa-sitemap"></i>
+                  </div>
+                  <div>
+                    <h3 className="text-xl sm:text-2xl font-bold text-slate-900 dark:text-white">
+                      Organizational Experience
+                    </h3>
+                    <p className="text-xs text-slate-500 dark:text-slate-400 font-medium">
+                      HMJ DIKMI UNSIL & KOPMA UNSIL
+                    </p>
+                  </div>
+                </div>
+                <span className="hidden sm:inline-flex text-xs font-bold text-rose-700 dark:text-rose-400 bg-rose-50 dark:bg-slate-800 px-3 py-1 rounded-full border border-rose-200/60 dark:border-slate-700">
+                  2 Organizations
+                </span>
+              </div>
+
+              <div className="space-y-8">
+                
+                {/* Featured: HMJ DIKMI with 4 Clean Documentation Photos */}
+                <div className="p-7 sm:p-9 rounded-3xl bg-rose-50/30 dark:bg-slate-800/80 border-2 border-rose-100 dark:border-slate-700 shadow-sm hover:shadow-xl transition-all">
+                  <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                    
+                    {/* Left Column: Organization Details & Concise Bullets */}
+                    <div className="lg:col-span-6 flex flex-col justify-center">
+                      <div>
+                        <div className="flex flex-wrap items-center gap-2 mb-3">
+                          <span className="text-xs font-bold text-slate-800 dark:text-slate-200 bg-amber-100 dark:bg-amber-950/60 border border-amber-300 dark:border-amber-800 px-3 py-1 rounded-xl">
+                            2024 — 2025 (2 Periods)
+                          </span>
+                        </div>
+
+                        <h4 className="text-2xl font-display font-bold text-slate-900 dark:text-white mb-1">
+                          Divisi Kewirausahaan <span className="text-rose-700 dark:text-rose-400">(2 Periode)</span>
+                        </h4>
+                        <p className="text-xs sm:text-sm font-semibold text-slate-700 dark:text-slate-300 mb-5">
+                          Himpunan Mahasiswa Jurusan Pendidikan Ekonomi (HMJ DIKMI) • FKIP Universitas Siliwangi
+                        </p>
+
+                        <div className="space-y-2.5">
+                          <div className="flex items-start gap-2.5 text-xs sm:text-sm text-slate-700 dark:text-slate-300">
+                            <i className="fas fa-check-circle text-rose-600 dark:text-rose-400 mt-1 flex-shrink-0 text-xs"></i>
+                            <span><strong>DIKMI Mart Operations:</strong> Mengelola unit usaha ritel offline & online mahasiswa untuk kebutuhan kampus.</span>
+                          </div>
+                          <div className="flex items-start gap-2.5 text-xs sm:text-sm text-slate-700 dark:text-slate-300">
+                            <i className="fas fa-check-circle text-rose-600 dark:text-rose-400 mt-1 flex-shrink-0 text-xs"></i>
+                            <span><strong>Financial & Inventory Control:</strong> Bertanggung jawab atas pengadaan stok produk, penetapan harga jual, dan arus kas harian.</span>
+                          </div>
+                          <div className="flex items-start gap-2.5 text-xs sm:text-sm text-slate-700 dark:text-slate-300">
+                            <i className="fas fa-check-circle text-rose-600 dark:text-rose-400 mt-1 flex-shrink-0 text-xs"></i>
+                            <span><strong>Team Leadership:</strong> Memimpin koordinasi tim divisi selama 2 periode kepengurusan berturut-turut.</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* Right Column: 4 Clean Documentation Photo Frames without text (Identical Size) */}
+                    <div className="lg:col-span-6">
+                      <div className="grid grid-cols-2 gap-3 sm:gap-4">
+                        <div className="group relative rounded-2xl overflow-hidden bg-slate-900 border border-rose-100 dark:border-slate-700 shadow-sm hover:shadow-md transition-all duration-300 h-32 sm:h-36">
+                          <img
+                            src="./assets/ade-hero.jpg"
+                            alt="Dokumentasi HMJ DIKMI 1"
+                            className="w-full h-full object-cover object-[center_20%] group-hover:scale-105 transition-transform duration-500"
+                          />
+                        </div>
+                        <div className="group relative rounded-2xl overflow-hidden bg-slate-900 border border-rose-100 dark:border-slate-700 shadow-sm hover:shadow-md transition-all duration-300 h-32 sm:h-36">
+                          <img
+                            src="./assets/ade-about.jpg"
+                            alt="Dokumentasi HMJ DIKMI 2"
+                            className="w-full h-full object-cover object-[center_70%] group-hover:scale-105 transition-transform duration-500"
+                          />
+                        </div>
+                        <div className="group relative rounded-2xl overflow-hidden bg-slate-900 border border-rose-100 dark:border-slate-700 shadow-sm hover:shadow-md transition-all duration-300 h-32 sm:h-36">
+                          <img
+                            src="./assets/ade-yellow.jpg"
+                            alt="Dokumentasi HMJ DIKMI 3"
+                            className="w-full h-full object-cover object-[center_15%] group-hover:scale-105 transition-transform duration-500"
+                          />
+                        </div>
+                        <div className="group relative rounded-2xl overflow-hidden bg-slate-900 border border-rose-100 dark:border-slate-700 shadow-sm hover:shadow-md transition-all duration-300 h-32 sm:h-36">
+                          <img
+                            src="./assets/ade-white.jpg"
+                            alt="Dokumentasi HMJ DIKMI 4"
+                            className="w-full h-full object-cover object-[center_65%] group-hover:scale-105 transition-transform duration-500"
+                          />
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+
+                {/* Secondary: KOPMA UNSIL with 2 Clean Documentation Photos (Identical Size) */}
+                <div className="p-7 sm:p-9 rounded-3xl bg-white dark:bg-slate-800/80 border border-rose-100 dark:border-slate-700 shadow-sm hover:shadow-xl transition-all">
+                  <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                    
+                    {/* Left Column: Details */}
+                    <div className="lg:col-span-6 flex flex-col justify-center">
+                      <div className="mb-3">
+                        <span className="text-xs font-bold text-slate-800 dark:text-slate-200 bg-amber-100 dark:bg-amber-950/60 border border-amber-300 dark:border-amber-800 px-3 py-1 rounded-xl inline-block">
+                          2023 — Present
+                        </span>
+                      </div>
+
+                      <h4 className="text-xl sm:text-2xl font-bold text-slate-900 dark:text-white mb-1">
+                        Anggota Aktif Koperasi Mahasiswa
+                      </h4>
+                      <p className="text-xs sm:text-sm font-semibold text-slate-600 dark:text-slate-300 mb-4">
+                        Koperasi Mahasiswa (KOPMA) • Universitas Siliwangi
+                      </p>
+
+                      <p className="text-xs sm:text-sm text-slate-700 dark:text-slate-300 leading-relaxed">
+                        Aktif menjalin relasi dan mendukung pengembangan unit usaha koperasi mahasiswa, serta berkontribusi dalam kepanitiaan acara formal temu anggota.
+                      </p>
+                    </div>
+
+                    {/* Right Column: 2 Clean Documentation Photo Frames without text (Identical Size) */}
+                    <div className="lg:col-span-6">
+                      <div className="grid grid-cols-2 gap-3 sm:gap-4">
+                        <div className="group relative rounded-2xl overflow-hidden bg-slate-900 border border-rose-100 dark:border-slate-700 shadow-sm hover:shadow-md transition-all duration-300 h-32 sm:h-36">
+                          <img
+                            src="./assets/ade-yellow.jpg"
+                            alt="Dokumentasi KOPMA UNSIL 1"
+                            className="w-full h-full object-cover object-[center_20%] group-hover:scale-105 transition-transform duration-500"
+                          />
+                        </div>
+                        <div className="group relative rounded-2xl overflow-hidden bg-slate-900 border border-rose-100 dark:border-slate-700 shadow-sm hover:shadow-md transition-all duration-300 h-32 sm:h-36">
+                          <img
+                            src="./assets/ade-white.jpg"
+                            alt="Dokumentasi KOPMA UNSIL 2"
+                            className="w-full h-full object-cover object-[center_70%] group-hover:scale-105 transition-transform duration-500"
+                          />
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+            {/* 2. COMMITTEE & EVENT EXPERIENCE (Continuous / Stacked Vertically) */}
+            <div>
+              
+              {/* Subsection Title (in English) */}
+              <div className="flex items-center justify-between pb-4 mb-8 border-b border-rose-100 dark:border-slate-800">
+                <div className="flex items-center gap-3">
+                  <div className="w-10 h-10 rounded-xl bg-amber-100 dark:bg-amber-950/60 text-amber-700 dark:text-amber-400 flex items-center justify-center text-lg shadow-xs">
+                    <i className="fas fa-clipboard-list"></i>
+                  </div>
+                  <div>
+                    <h3 className="text-xl sm:text-2xl font-bold text-slate-900 dark:text-white">
+                      Committee Experience
+                    </h3>
+                    <p className="text-xs text-slate-500 dark:text-slate-400 font-medium">
+                      7+ Event Committees across National, Regional, and Campus Scales
+                    </p>
+                  </div>
+                </div>
+                <span className="hidden sm:inline-flex text-xs font-bold text-rose-700 dark:text-rose-400 bg-rose-50 dark:bg-slate-800 px-3 py-1 rounded-full border border-rose-200/60 dark:border-slate-700">
+                  7+ Events
+                </span>
+              </div>
+
+              {/* Committee Grid: Clean, Crisp, Concise Cards */}
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                {committees.map((com) => (
+                  <div
+                    key={com.id}
+                    className="p-6 rounded-2xl sm:rounded-3xl bg-white dark:bg-slate-800/80 border border-rose-100 dark:border-slate-700 shadow-xs hover:shadow-lg hover:border-rose-300 dark:hover:border-rose-700 transition-all flex flex-col justify-between group"
+                  >
+                    <div>
+                      <div className="flex items-center justify-between gap-2 mb-3">
+                        <span className="text-[11px] font-bold text-white bg-rose-700 px-3 py-0.5 rounded-full shadow-xs">
+                          {com.year}
+                        </span>
+                        <span className="text-[10px] font-bold uppercase tracking-wider text-amber-800 dark:text-amber-300 bg-amber-50 dark:bg-amber-950/60 px-2.5 py-0.5 rounded-md border border-amber-200/60 dark:border-amber-800/50">
+                          {com.scope}
+                        </span>
+                      </div>
+
+                      <h4 className="text-base font-bold text-slate-900 dark:text-white mb-1.5 group-hover:text-rose-700 dark:group-hover:text-rose-400 transition-colors leading-snug">
+                        {com.event}
+                      </h4>
+
+                      <div className="text-xs font-bold text-rose-700 dark:text-rose-400 mb-3 flex items-center gap-1.5">
+                        <i className="fas fa-user-tag text-[10px]"></i>
+                        <span>{com.role}</span>
+                      </div>
+
+                      <p className="text-xs text-slate-600 dark:text-slate-300 leading-relaxed mb-4">
+                        {com.desc}
+                      </p>
+                    </div>
+
+                    <div className="pt-3 border-t border-rose-50 dark:border-slate-700 flex items-center justify-between text-[11px]">
+                      <span className="text-slate-500 dark:text-slate-400 font-medium">Kategori: {com.category}</span>
+                      <span className="text-rose-600 dark:text-rose-400 font-bold flex items-center gap-1">
+                        <i className="fas fa-check"></i> Selesai
+                      </span>
+                    </div>
+                  </div>
+                ))}
+              </div>
+
+            </div>
+
+          </div>
+        </section>
+      );
+    }
+
+    // 7. PROJECTS
+    function Projects({ projects, onSelectProject }) {
+      const [activeCategory, setActiveCategory] = useState('Semua');
+      const [searchQuery, setSearchQuery] = useState('');
+
+      const categories = ['Semua', 'Kewirausahaan', 'Keuangan', 'Desain & Branding', 'Edukasi'];
+
+      const filteredProjects = projects.filter((p) => {
+        const matchesCategory = activeCategory === 'Semua' || p.category === activeCategory;
+        const matchesSearch =
+          searchQuery.trim() === '' ||
+          p.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+          p.shortDesc.toLowerCase().includes(searchQuery.toLowerCase()) ||
+          p.tools.some((t) => t.toLowerCase().includes(searchQuery.toLowerCase())) ||
+          p.tag.toLowerCase().includes(searchQuery.toLowerCase());
+        return matchesCategory && matchesSearch;
+      });
+
+      return (
+        <section id="portofolio" className="py-24 bg-rose-50/40 dark:bg-slate-950 relative">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div className="text-center max-w-3xl mx-auto mb-12">
+              <span className="text-xs font-bold uppercase tracking-widest text-rose-700 dark:text-rose-400 bg-white dark:bg-slate-900 px-4 py-1.5 rounded-full border border-rose-200 dark:border-slate-800 inline-block mb-3 shadow-xs">
+                Karya & Inisiatif
+              </span>
+              <h2 className="text-3xl sm:text-4xl font-display font-bold text-slate-900 dark:text-white mb-4">
+                Portofolio Proyek & <span className="italic text-rose-700 dark:text-rose-400">Studi Kasus</span>
+              </h2>
+              <div className="w-16 h-1 bg-rose-700 dark:bg-rose-400 mx-auto rounded-full mb-4"></div>
+              <p className="text-slate-600 dark:text-slate-300 text-sm sm:text-base leading-relaxed">
+                Inisiatif nyata di bidang manajemen operasional unit usaha mahasiswa (DIKMI Mart), tata kelola anggaran keuangan nasional, perancangan modul ajar HOTS, dan branding visual.
+              </p>
+            </div>
+
+            <div className="max-w-3xl mx-auto mb-12 space-y-4">
+              
+              <div className="relative">
+                <i className="fas fa-search absolute left-4 top-1/2 -translate-y-1/2 text-slate-400 text-sm"></i>
+                <input
+                  type="text"
+                  value={searchQuery}
+                  onChange={(e) => setSearchQuery(e.target.value)}
+                  placeholder="Cari proyek (contoh: DIKMI Mart, Excel, PKM-K, Keuangan, Canva, Modul)..."
+                  className="w-full pl-11 pr-10 py-3 rounded-2xl bg-white dark:bg-slate-900 border border-rose-200/80 dark:border-slate-800 text-slate-900 dark:text-white text-xs sm:text-sm shadow-xs focus:outline-none focus:ring-2 focus:ring-rose-600 transition-all placeholder:text-slate-400"
+                />
+                {searchQuery && (
+                  <button
+                    onClick={() => setSearchQuery('')}
+                    className="absolute right-3.5 top-1/2 -translate-y-1/2 text-slate-400 hover:text-slate-600 text-xs"
+                    title="Hapus Pencarian"
+                  >
+                    <i className="fas fa-times"></i>
+                  </button>
+                )}
+              </div>
+
+              <div className="flex flex-wrap items-center justify-center gap-2">
+                {categories.map((cat) => (
+                  <button
+                    key={cat}
+                    onClick={() => setActiveCategory(cat)}
+                    className={`px-4 py-2 rounded-full text-xs font-bold uppercase tracking-wider transition-all duration-200 ${
+                      activeCategory === cat
+                        ? 'bg-rose-700 text-white shadow-md shadow-rose-700/20'
+                        : 'bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-rose-200/80 dark:border-slate-700 hover:border-rose-400 hover:text-rose-700'
+                    }`}
+                  >
+                    {cat}
+                  </button>
+                ))}
+              </div>
+
+            </div>
+
+            {filteredProjects.length > 0 ? (
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                {filteredProjects.map((project) => (
+                  <div
+                    key={project.id}
+                    className="bg-white dark:bg-slate-900 rounded-3xl overflow-hidden border border-rose-100 dark:border-slate-800 shadow-sm hover:shadow-2xl hover:border-rose-300 dark:hover:border-rose-800 transition-all duration-300 flex flex-col justify-between group transform hover:-translate-y-1.5"
+                  >
+                    <div>
+                      <div className="p-6 bg-gradient-to-br from-rose-900 via-rose-950 to-slate-950 text-white relative overflow-hidden flex flex-col justify-between min-h-[150px]">
+                        <div className="absolute inset-0 opacity-15" style={{ backgroundImage: 'radial-gradient(#FBBF24 1px, transparent 1px)', backgroundSize: '16px 16px' }}></div>
+                        
+                        <div className="relative z-10 flex items-center justify-between">
+                          <span className="text-[10px] font-bold uppercase tracking-wider bg-white/15 backdrop-blur-md text-amber-300 px-3 py-1 rounded-full border border-white/15">
+                            {project.category}
+                          </span>
+                          <span className="text-[10px] font-semibold text-slate-300">
+                            {project.period}
+                          </span>
+                        </div>
+
+                        <div className="relative z-10 mt-4">
+                          <span className="text-[11px] font-bold text-white bg-rose-700/80 backdrop-blur-md px-3 py-1 rounded-lg inline-block shadow-xs">
+                            {project.tag}
+                          </span>
+                        </div>
+                      </div>
+
+                      <div className="p-6 sm:p-7">
+                        <h3 className="text-lg font-bold text-slate-900 dark:text-white mb-2.5 group-hover:text-rose-700 dark:group-hover:text-rose-400 transition-colors leading-snug">
+                          {project.title}
+                        </h3>
+
+                        <p className="text-xs text-slate-600 dark:text-slate-300 leading-relaxed mb-5 line-clamp-3">
+                          {project.shortDesc}
+                        </p>
+
+                        {project.metrics && project.metrics.length > 0 && (
+                          <div className="grid grid-cols-2 gap-2 mb-5 p-3 rounded-2xl bg-rose-50/60 dark:bg-slate-800/60 border border-rose-100 dark:border-slate-700">
+                            {project.metrics.slice(0, 2).map((m, mIdx) => (
+                              <div key={mIdx} className="text-center">
+                                <div className="font-display font-bold text-sm text-rose-700 dark:text-rose-400">{m.value}</div>
+                                <div className="text-[10px] font-medium text-slate-500 dark:text-slate-400">{m.label}</div>
+                              </div>
+                            ))}
+                          </div>
+                        )}
+
+                        <div className="flex flex-wrap gap-1.5">
+                          {project.tools.slice(0, 3).map((tool, tIdx) => (
+                            <span
+                              key={tIdx}
+                              className="text-[10px] font-medium bg-rose-50 dark:bg-slate-800 text-rose-700 dark:text-rose-300 px-2.5 py-0.5 rounded-md border border-rose-100 dark:border-slate-700"
+                            >
+                              {tool}
+                            </span>
+                          ))}
+                          {project.tools.length > 3 && (
+                            <span className="text-[10px] font-medium bg-slate-100 dark:bg-slate-800 text-slate-500 px-2 py-0.5 rounded-md">
+                              +{project.tools.length - 3}
+                            </span>
+                          )}
+                        </div>
+                      </div>
+                    </div>
+
+                    <div className="px-6 pb-6 pt-3 border-t border-rose-50 dark:border-slate-800/80 flex items-center justify-between">
+                      <span className="text-[11px] font-semibold text-emerald-600 dark:text-emerald-400 flex items-center gap-1">
+                        <i className="fas fa-check-circle text-xs"></i>
+                        <span>Tervalidasi</span>
+                      </span>
+
+                      <button
+                        onClick={() => onSelectProject(project)}
+                        className="inline-flex items-center gap-1.5 text-xs font-bold text-rose-700 dark:text-rose-400 hover:text-rose-800 dark:hover:text-rose-300 group-hover:translate-x-1 transition-all"
+                      >
+                        <span>Detail Studi Kasus</span>
+                        <i className="fas fa-arrow-right text-[10px]"></i>
+                      </button>
+                    </div>
+
+                  </div>
+                ))}
+              </div>
+            ) : (
+              <div className="text-center py-16 bg-white dark:bg-slate-900 rounded-3xl border border-rose-100 dark:border-slate-800 p-8">
+                <i className="fas fa-search text-3xl text-slate-300 mb-3"></i>
+                <h3 className="text-base font-bold text-slate-900 dark:text-white mb-1">
+                  Tidak ditemukan proyek dengan kata kunci "{searchQuery}"
+                </h3>
+                <p className="text-xs text-slate-500 mb-4">
+                  Coba gunakan kata kunci lain seperti Excel, DIKMI Mart, Keuangan, atau pilih kategori Semua.
+                </p>
+                <button
+                  onClick={() => { setSearchQuery(''); setActiveCategory('Semua'); }}
+                  className="px-4 py-2 rounded-xl bg-rose-700 text-white text-xs font-bold"
+                >
+                  Reset Filter
+                </button>
+              </div>
+            )}
+
+          </div>
+        </section>
+      );
+    }
+
+    // 8. PROJECT MODAL
+    function ProjectModal({ project, onClose }) {
+      useEffect(() => {
+        const handleKeyDown = (e) => { if (e.key === 'Escape') onClose(); };
+        window.addEventListener('keydown', handleKeyDown);
+        return () => window.removeEventListener('keydown', handleKeyDown);
+      }, [onClose]);
+
+      if (!project) return null;
+
+      return (
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 md:p-10 bg-black/75 backdrop-blur-md">
+          <div className="absolute inset-0" onClick={onClose}></div>
+
+          <div className="relative w-full max-w-3xl max-h-[92vh] bg-white dark:bg-slate-900 rounded-3xl border border-rose-100 dark:border-slate-800 shadow-2xl overflow-y-auto z-10 flex flex-col">
+            
+            <div className="relative p-6 sm:p-8 bg-gradient-to-br from-rose-900 via-rose-950 to-slate-950 text-white flex flex-col justify-between min-h-[170px]">
+              <div className="absolute inset-0 opacity-15" style={{ backgroundImage: 'radial-gradient(#FBBF24 1px, transparent 1px)', backgroundSize: '16px 16px' }}></div>
+              
+              <button
+                onClick={onClose}
+                className="absolute top-5 right-5 w-10 h-10 rounded-full bg-white/15 hover:bg-white text-white hover:text-rose-900 flex items-center justify-center shadow-md transition-all z-20"
+                aria-label="Tutup Modal"
+              >
+                <i className="fas fa-times text-sm"></i>
+              </button>
+
+              <div className="relative z-10 flex flex-wrap items-center gap-2 mb-3">
+                <span className="text-[11px] font-bold uppercase tracking-wider bg-rose-700 text-white px-3 py-1 rounded-full shadow-xs">
+                  {project.category}
+                </span>
+                <span className="text-[11px] font-semibold text-amber-300 bg-black/40 px-3 py-1 rounded-full border border-white/10">
+                  {project.period}
+                </span>
+              </div>
+
+              <h2 className="relative z-10 text-xl sm:text-2xl md:text-3xl font-display font-bold text-white leading-tight">
+                {project.title}
+              </h2>
+            </div>
+
+            <div className="p-6 sm:p-8 space-y-6">
+              
+              <div>
+                <h4 className="text-xs font-bold uppercase tracking-wider text-rose-700 dark:text-rose-400 mb-2 flex items-center gap-2">
+                  <i className="fas fa-file-alt"></i>
+                  <span>Ringkasan & Deskripsi Proyek</span>
+                </h4>
+                <p className="text-sm text-slate-700 dark:text-slate-300 leading-relaxed text-justify">
+                  {project.fullDesc}
+                </p>
+              </div>
+
+              {(project.problem || project.solution) && (
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
+                  {project.problem && (
+                    <div className="p-5 rounded-2xl bg-rose-50/60 dark:bg-slate-800/60 border border-rose-100 dark:border-slate-700">
+                      <div className="text-xs font-bold text-rose-700 dark:text-rose-400 uppercase tracking-wider mb-1.5 flex items-center gap-2">
+                        <i className="fas fa-exclamation-circle"></i>
+                        <span>Tantangan & Kebutuhan</span>
+                      </div>
+                      <p className="text-xs text-slate-700 dark:text-slate-300 leading-relaxed">
+                        {project.problem}
+                      </p>
+                    </div>
+                  )}
+
+                  {project.solution && (
+                    <div className="p-5 rounded-2xl bg-emerald-50/60 dark:bg-emerald-950/40 border border-emerald-100 dark:border-emerald-900/60">
+                      <div className="text-xs font-bold text-emerald-700 dark:text-emerald-400 uppercase tracking-wider mb-1.5 flex items-center gap-2">
+                        <i className="fas fa-lightbulb"></i>
+                        <span>Solusi & Langkah Eksekusi</span>
+                      </div>
+                      <p className="text-xs text-slate-700 dark:text-slate-300 leading-relaxed">
+                        {project.solution}
+                      </p>
+                    </div>
+                  )}
+                </div>
+              )}
+
+              <div>
+                <h4 className="text-xs font-bold uppercase tracking-wider text-rose-700 dark:text-rose-400 mb-3 flex items-center gap-2">
+                  <i className="fas fa-tools"></i>
+                  <span>Perangkat & Metodologi Kerja</span>
+                </h4>
+                <div className="flex flex-wrap gap-2">
+                  {project.tools.map((tool, idx) => (
+                    <span
+                      key={idx}
+                      className="px-3.5 py-1.5 rounded-xl text-xs font-semibold bg-rose-50 dark:bg-slate-800 text-rose-700 dark:text-rose-300 border border-rose-100 dark:border-slate-700 flex items-center gap-1.5"
+                    >
+                      <i className="fas fa-check text-[10px]"></i>
+                      <span>{tool}</span>
+                    </span>
+                  ))}
+                </div>
+              </div>
+
+              {project.metrics && project.metrics.length > 0 && (
+                <div>
+                  <h4 className="text-xs font-bold uppercase tracking-wider text-rose-700 dark:text-rose-400 mb-3 flex items-center gap-2">
+                    <i className="fas fa-chart-line"></i>
+                    <span>Hasil Terukur & Dampak Inisiatif</span>
+                  </h4>
+                  <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+                    {project.metrics.map((metric, idx) => (
+                      <div
+                        key={idx}
+                        className="p-4 rounded-2xl bg-white dark:bg-slate-800 border border-rose-100 dark:border-slate-700 text-center shadow-xs"
+                      >
+                        <div className="font-display font-bold text-xl text-rose-700 dark:text-rose-400 mb-0.5">
+                          {metric.value}
+                        </div>
+                        <p className="text-[11px] font-bold text-slate-800 dark:text-slate-200">
+                          {metric.label}
+                        </p>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )}
+
+              <div className="pt-6 border-t border-rose-100 dark:border-slate-800 flex flex-wrap items-center justify-between gap-4">
+                <div className="text-xs text-slate-500 dark:text-slate-400">
+                  Inisiatif karya mahasiswa Universitas Siliwangi
+                </div>
+                
+                <div className="flex items-center gap-2.5">
+                  <a
+                    href={`https://wa.me/6285603475908?text=${encodeURIComponent(`Halo Ade Sri, saya tertarik mendiskusikan studi kasus proyek "${project.title}" yang saya lihat di portofolio Anda.`)}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="px-4 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold transition-all shadow-xs flex items-center gap-1.5"
+                  >
+                    <i className="fab fa-whatsapp"></i>
+                    <span>Diskusikan Proyek</span>
+                  </a>
+
+                  <button
+                    onClick={onClose}
+                    className="px-5 py-2.5 rounded-xl bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 text-slate-700 dark:text-slate-300 text-xs font-bold uppercase tracking-wider transition-all"
+                  >
+                    Tutup
+                  </button>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      );
+    }
+
+    // 9. CERTIFICATES
+    function Certificates({ certificates }) {
+      return (
+        <section id="sertifikat" className="py-24 bg-white dark:bg-slate-900 relative">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div className="text-center max-w-3xl mx-auto mb-16">
+              <span className="text-xs font-bold uppercase tracking-widest text-rose-700 dark:text-rose-400 bg-rose-50 dark:bg-rose-950/50 px-4 py-1.5 rounded-full border border-rose-200 dark:border-slate-800 inline-block mb-3 shadow-xs">
+                Apresiasi & Lisensi
+              </span>
+              <h2 className="text-3xl sm:text-4xl font-display font-bold text-slate-900 dark:text-white mb-4">
+                Sertifikat & <span className="italic text-rose-700 dark:text-rose-400">Penghargaan Resmi</span>
+              </h2>
+              <div className="w-16 h-1 bg-rose-700 dark:bg-rose-400 mx-auto rounded-full mb-4"></div>
+              <p className="text-slate-600 dark:text-slate-300 text-sm sm:text-base leading-relaxed">
+                Bukti formal kompetensi teknis perkantoran, pengakuan kepemimpinan organisasi universitas, dan dedikasi pada acara tingkat nasional.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+              {certificates.map((cert) => (
+                <div
+                  key={cert.id}
+                  className="p-7 rounded-3xl bg-rose-50/40 dark:bg-slate-800/60 border border-rose-100 dark:border-slate-700 hover:border-rose-300 dark:hover:border-rose-800 shadow-xs hover:shadow-xl transition-all flex flex-col justify-between group"
+                >
+                  <div>
+                    <div className="flex items-center justify-between mb-4">
+                      <div className="w-11 h-11 rounded-2xl bg-white dark:bg-slate-700 text-rose-700 dark:text-rose-400 flex items-center justify-center text-lg shadow-xs group-hover:scale-110 transition-transform">
+                        <i className="fas fa-award"></i>
+                      </div>
+                      <span className="text-[11px] font-bold text-amber-800 dark:text-amber-300 bg-amber-50 dark:bg-amber-950/60 border border-amber-200/60 dark:border-amber-800/50 px-2.5 py-0.5 rounded-full">
+                        {cert.year}
+                      </span>
+                    </div>
+
+                    <span className="text-[10px] font-bold uppercase tracking-wider text-rose-700 dark:text-rose-400 block mb-1.5">
+                      {cert.category}
+                    </span>
+
+                    <h3 className="text-sm font-bold text-slate-900 dark:text-white mb-2 leading-snug group-hover:text-rose-700 dark:group-hover:text-rose-400 transition-colors">
+                      {cert.title}
+                    </h3>
+
+                    <p className="text-xs font-semibold text-slate-700 dark:text-slate-300 mb-2">
+                      {cert.issuer}
+                    </p>
+
+                    <p className="text-xs text-slate-600 dark:text-slate-400 leading-relaxed mb-4">
+                      {cert.desc}
+                    </p>
+                  </div>
+
+                  <div className="pt-3.5 border-t border-rose-100 dark:border-slate-700 flex items-center justify-between text-[11px]">
+                    <span className="text-emerald-600 dark:text-emerald-400 font-semibold flex items-center gap-1">
+                      <i className="fas fa-shield-alt"></i>
+                      <span>{cert.credential}</span>
+                    </span>
+                    <span className="font-semibold text-slate-500">Resmi</span>
+                  </div>
+                </div>
+              ))}
+            </div>
+
+          </div>
+        </section>
+      );
+    }
+
+    // 10. CV MODAL
+    function CVModal({ personal, education, experiences, committees, hardSkills, softSkills, onClose }) {
+      useEffect(() => {
+        const handleKeyDown = (e) => { if (e.key === 'Escape') onClose(); };
+        window.addEventListener('keydown', handleKeyDown);
+        return () => window.removeEventListener('keydown', handleKeyDown);
+      }, [onClose]);
+
+      return (
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-2 sm:p-4 md:p-8 bg-black/80 backdrop-blur-md">
+          <div className="absolute inset-0" onClick={onClose}></div>
+
+          <div className="relative w-full max-w-4xl max-h-[95vh] bg-white text-slate-900 rounded-3xl shadow-2xl overflow-hidden z-10 flex flex-col">
+            
+            {/* Modal Toolbar (Hidden on Print) */}
+            <div className="no-print p-4 bg-slate-900 text-white flex flex-wrap items-center justify-between gap-3 border-b border-slate-800">
+              <div className="flex items-center gap-2.5">
+                <span className="w-3 h-3 rounded-full bg-rose-600"></span>
+                <span className="text-xs font-bold uppercase tracking-wider text-slate-200">
+                  Curriculum Vitae Preview • Ade Sri Rahayu
+                </span>
+              </div>
+
+              <div className="flex items-center gap-2">
+                {/* Direct Download Button for Original PDF */}
+                <a
+                  href="./CV/CV%20Ade%20Sri%20Rahayu.pdf"
+                  download="CV Ade Sri Rahayu.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="px-4 py-2 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold flex items-center gap-2 transition-colors shadow-sm"
+                  title="Unduh Berkas PDF Asli"
+                >
+                  <i className="fas fa-file-download"></i>
+                  <span>Unduh File PDF Asli</span>
+                </a>
+
+                {/* Print / Save View */}
+                <button
+                  onClick={() => window.print()}
+                  className="px-4 py-2 rounded-xl bg-rose-700 hover:bg-rose-800 text-white text-xs font-bold flex items-center gap-2 transition-colors shadow-sm"
+                  title="Cetak atau Simpan Sebagai PDF"
+                >
+                  <i className="fas fa-print"></i>
+                  <span>Cetak / Simpan PDF</span>
+                </button>
+
+                {/* Close Button */}
+                <button
+                  onClick={onClose}
+                  className="w-9 h-9 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-300 hover:text-white flex items-center justify-center text-sm transition-colors"
+                  title="Tutup Pratinjau"
+                >
+                  <i className="fas fa-times"></i>
+                </button>
+              </div>
+            </div>
+
+            {/* Printable CV Content */}
+            <div className="cv-print-area p-8 sm:p-12 overflow-y-auto bg-white font-sans text-slate-900 selection:bg-rose-100">
+              
+              {/* Header Section */}
+              <div className="border-b-2 border-slate-900 pb-6 mb-6">
+                <div className="flex flex-col sm:flex-row justify-between sm:items-start gap-4">
+                  <div className="flex items-start gap-4">
+                    <img
+                      src={personal.photoUrl || "./assets/ade-profile.png"}
+                      alt={personal.name}
+                      className="w-16 h-20 sm:w-20 sm:h-24 rounded-lg object-cover border border-slate-300 shadow-xs flex-shrink-0"
+                      onError={(e) => {
+                        e.target.onerror = null;
+                        e.target.src = './assets/ade-profile.png';
+                      }}
+                    />
+                    <div>
+                      <h1 className="font-display text-2xl sm:text-3xl font-bold text-slate-900 tracking-tight">
+                        {personal.name}
+                      </h1>
+                      <p className="text-xs sm:text-sm font-bold text-rose-800 uppercase tracking-widest mt-0.5">
+                        Mahasiswa Aktif
+                      </p>
+                      <p className="text-xs font-semibold text-slate-700 mt-1">
+                        S1 Pendidikan Ekonomi • Universitas Siliwangi (IPK 3.82 / 4.00)
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="text-xs text-slate-600 space-y-1 sm:text-right">
+                    <div><strong className="text-slate-900">No. Hp:</strong> {personal.phone}</div>
+                    <div><strong className="text-slate-900">Email:</strong> {personal.email}</div>
+                    <div><strong className="text-slate-900">Domisili:</strong> {personal.address}</div>
+                  </div>
+                </div>
+              </div>
+
+              {/* 1. Profil Singkat */}
+              <div className="mb-6">
+                <h2 className="text-xs font-bold uppercase tracking-widest text-slate-900 border-b border-slate-300 pb-1 mb-2">
+                  PROFIL SINGKAT
+                </h2>
+                <p className="text-xs text-slate-700 leading-relaxed text-justify">
+                  {personal.bio}
+                </p>
+              </div>
+
+              {/* 2. Pengalaman Organisasi */}
+              <div className="mb-6">
+                <h2 className="text-xs font-bold uppercase tracking-widest text-slate-900 border-b border-slate-300 pb-1 mb-2">
+                  PENGALAMAN ORGANISASI
+                </h2>
+                {experiences.map((exp) => (
+                  <div key={exp.id} className="mb-3.5">
+                    <div className="flex justify-between items-baseline">
+                      <h3 className="text-xs font-bold text-slate-900">{exp.organization}</h3>
+                      <span className="text-[11px] font-semibold text-slate-600">{exp.period}</span>
+                    </div>
+                    <div className="text-[11px] font-semibold text-rose-800 mb-1">{exp.role}</div>
+                    <ul className="list-disc list-inside text-[11px] text-slate-700 space-y-1 ml-1">
+                      {exp.achievements.map((ach, aIdx) => (
+                        <li key={aIdx}>{ach}</li>
+                      ))}
+                    </ul>
+                  </div>
+                ))}
+              </div>
+
+              {/* 3. Pendidikan */}
+              <div className="mb-6">
+                <h2 className="text-xs font-bold uppercase tracking-widest text-slate-900 border-b border-slate-300 pb-1 mb-2">
+                  PENDIDIKAN
+                </h2>
+                {education.map((edu, idx) => (
+                  <div key={idx} className="mb-2">
+                    <div className="flex justify-between items-baseline">
+                      <h3 className="text-xs font-bold text-slate-900">{edu.degree} - {edu.institution}</h3>
+                      <span className="text-[11px] font-semibold text-slate-600">{edu.period}</span>
+                    </div>
+                    <div className="text-[11px] font-bold text-rose-800">
+                      {edu.gpa}
+                    </div>
+                    <p className="text-[11px] text-slate-600 mt-0.5 leading-relaxed">{edu.description}</p>
+                  </div>
+                ))}
+              </div>
+
+              {/* 4. Pengalaman Kepanitiaan */}
+              <div className="mb-6">
+                <h2 className="text-xs font-bold uppercase tracking-widest text-slate-900 border-b border-slate-300 pb-1 mb-2">
+                  PENGALAMAN KEPANITIAAN
+                </h2>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-[11px]">
+                  {committees.map((com) => (
+                    <div key={com.id} className="p-2.5 rounded bg-slate-50 border border-slate-200">
+                      <div className="flex justify-between items-baseline">
+                        <span className="font-bold text-slate-900">{com.event}</span>
+                        <span className="text-[10px] font-semibold text-slate-500">{com.year}</span>
+                      </div>
+                      <div className="font-semibold text-rose-800 text-[11px]">{com.role}</div>
+                      <div className="text-slate-600 text-[10px] mt-0.5 leading-snug">{com.desc}</div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              {/* 5. Kemampuan (Skill) */}
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                <div>
+                  <h2 className="text-xs font-bold uppercase tracking-widest text-slate-900 border-b border-slate-300 pb-1 mb-2">
+                    Hard Skills
+                  </h2>
+                  <div className="space-y-1.5 text-[11px]">
+                    {hardSkills.map((s, idx) => (
+                      <div key={idx} className="flex justify-between items-center py-0.5 border-b border-slate-100">
+                        <span className="text-slate-700">• {s.name}</span>
+                        <span className="font-bold text-rose-800">{s.level}%</span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
+                <div>
+                  <h2 className="text-xs font-bold uppercase tracking-widest text-slate-900 border-b border-slate-300 pb-1 mb-2">
+                    Soft Skills
+                  </h2>
+                  <div className="space-y-1.5 text-[11px]">
+                    {softSkills.map((s, idx) => (
+                      <div key={idx} className="p-1.5 rounded bg-slate-50 border border-slate-100">
+                        <span className="font-bold text-slate-900">• {s.name}</span>
+                        <p className="text-[10px] text-slate-600">{s.desc}</p>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+
+              {/* Footer of CV */}
+              <div className="mt-8 pt-4 border-t border-slate-300 text-center text-[10px] text-slate-500">
+                Curriculum Vitae resmi Ade Sri Rahayu — S1 Pendidikan Ekonomi, Universitas Siliwangi. Dokumen diperbarui secara berkala.
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+      );
+    }
+
+    // 11. CONTACT
+    function Contact({ personal, onShowToast }) {
+      const [formData, setFormData] = useState({ name: '', email: '', subject: '', message: '' });
+      const [submitted, setSubmitted] = useState(false);
+      const [copiedKey, setCopiedKey] = useState(null);
+
+      const copyToClipboard = (text, key, label) => {
+        navigator.clipboard.writeText(text);
+        setCopiedKey(key);
+        if (onShowToast) {
+          onShowToast(`${label} berhasil disalin ke clipboard!`);
+        }
+        setTimeout(() => setCopiedKey(null), 2500);
+      };
+
+      const handleSelectTemplate = (tpl) => {
+        setFormData((prev) => ({
+          ...prev,
+          subject: tpl.subject,
+          message: tpl.message
+        }));
+        if (onShowToast) {
+          onShowToast(`Template "${tpl.label}" dimuat ke formulir!`);
+        }
+      };
+
+      const handleSubmit = (e) => {
+        e.preventDefault();
+        setSubmitted(true);
+        if (onShowToast) {
+          onShowToast('Pesan Anda berhasil dikirim!');
+        }
+        setTimeout(() => {
+          setSubmitted(false);
+          setFormData({ name: '', email: '', subject: '', message: '' });
+        }, 4000);
+      };
+
+      const handleSendWhatsApp = () => {
+        if (!formData.name || !formData.message) {
+          alert('Silakan lengkapi Nama dan Pesan Anda terlebih dahulu.');
+          return;
+        }
+        const text = encodeURIComponent(
+          `Halo Ade Sri Rahayu,\n\nNama: ${formData.name}\nEmail: ${formData.email || '-'}\nTopik: ${formData.subject || 'Kolaborasi'}\n\nPesan:\n${formData.message}`
+        );
+        window.open(`https://wa.me/${personal.whatsapp}?text=${text}`, '_blank');
+      };
+
+      return (
+        <section id="kontak" className="py-24 bg-rose-50/50 dark:bg-slate-950 relative">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div className="text-center max-w-3xl mx-auto mb-16">
+              <span className="text-xs font-bold uppercase tracking-widest text-rose-700 dark:text-rose-400 bg-white dark:bg-slate-900 px-4 py-1.5 rounded-full border border-rose-200 dark:border-slate-800 inline-block mb-3 shadow-xs">
+                Hubungi Saya
+              </span>
+              <h2 className="text-3xl sm:text-4xl font-display font-bold text-slate-900 dark:text-white mb-4">
+                Mari <span className="italic text-rose-700 dark:text-rose-400">Bekerja Sama & Berkolaborasi</span>
+              </h2>
+              <div className="w-16 h-1 bg-rose-700 dark:bg-rose-400 mx-auto rounded-full mb-4"></div>
+              <p className="text-slate-600 dark:text-slate-300 text-sm sm:text-base leading-relaxed">
+                Terbuka untuk peluang magang, kolaborasi bisnis ritel/UMKM, riset pendidikan ekonomi, atau undangan kepanitiaan dan workshop.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
+              
+              <div className="lg:col-span-5 bg-gradient-to-br from-rose-900 via-rose-950 to-slate-950 text-white p-8 sm:p-10 rounded-3xl shadow-xl flex flex-col justify-between relative overflow-hidden">
+                <div className="absolute inset-0 opacity-10" style={{ backgroundImage: 'radial-gradient(#FBBF24 1px, transparent 1px)', backgroundSize: '20px 20px' }}></div>
+                
+                <div className="relative z-10">
+                  <span className="text-xs font-bold uppercase tracking-widest text-amber-300 block mb-2">
+                    Informasi Kontak Resmi
+                  </span>
+                  <h3 className="font-display text-2xl sm:text-3xl font-bold mb-4">
+                    Siap Berdiskusi & Berkolaborasi
+                  </h3>
+                  <p className="text-rose-100/80 text-xs sm:text-sm leading-relaxed mb-8">
+                    Silakan hubungi saya melalui jalur komunikasi berikut atau pilih template pesan cepat via WhatsApp.
+                  </p>
+
+                  <div className="space-y-4 text-xs sm:text-sm">
+                    
+                    <div className="flex items-center justify-between p-4 rounded-2xl bg-white/10 backdrop-blur-md border border-white/15">
+                      <div className="flex items-center gap-3.5">
+                        <div className="w-10 h-10 rounded-xl bg-white/20 flex items-center justify-center text-rose-300">
+                          <i className="fas fa-phone-alt"></i>
+                        </div>
+                        <div>
+                          <div className="text-[10px] text-rose-200 uppercase font-semibold">Telepon / WhatsApp</div>
+                          <div className="font-bold">{personal.phone}</div>
+                        </div>
+                      </div>
+                      <button
+                        onClick={() => copyToClipboard(personal.phone, 'phone', 'Nomor Telepon')}
+                        className="p-2 rounded-lg bg-white/20 hover:bg-white text-white hover:text-rose-900 text-xs transition-colors"
+                        title="Salin Nomor"
+                      >
+                        {copiedKey === 'phone' ? <i className="fas fa-check text-emerald-400"></i> : <i className="fas fa-copy"></i>}
+                      </button>
+                    </div>
+
+                    {/* Email Card */}
+                    <a
+                      href={`mailto:${personal.email}?subject=Peluang%20Kolaborasi%20/%20Karier%20-%20Ade%20Sri%20Rahayu`}
+                      className="flex items-center justify-between p-4 rounded-2xl bg-white/10 backdrop-blur-md border border-white/15 hover:bg-white/20 transition-all group"
+                      title="Kirim Pesan Email Langsung"
+                    >
+                      <div className="flex items-center gap-3.5">
+                        <div className="w-10 h-10 rounded-xl bg-white/20 flex items-center justify-center text-rose-300 group-hover:scale-110 transition-transform">
+                          <i className="fas fa-envelope"></i>
+                        </div>
+                        <div>
+                          <div className="text-[10px] text-rose-200 uppercase font-semibold">Email Resmi (Klik untuk Kirim)</div>
+                          <div className="font-bold">{personal.email}</div>
+                        </div>
+                      </div>
+                      <div
+                        className="p-2 rounded-lg bg-white/20 group-hover:bg-white text-white group-hover:text-rose-900 text-xs transition-colors"
+                        title="Kirim Pesan Email"
+                      >
+                        <i className="fas fa-paper-plane"></i>
+                      </div>
+                    </a>
+
+                    <div className="flex items-center gap-3.5 p-4 rounded-2xl bg-white/10 backdrop-blur-md border border-white/15">
+                      <div className="w-10 h-10 rounded-xl bg-white/20 flex items-center justify-center text-rose-300 flex-shrink-0">
+                        <i className="fas fa-map-marker-alt"></i>
+                      </div>
+                      <div>
+                        <div className="text-[10px] text-rose-200 uppercase font-semibold">Lokasi Domisili</div>
+                        <div className="font-bold leading-tight">{personal.address}</div>
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+
+                <div className="relative z-10 mt-8 pt-6 border-t border-white/15">
+                  <span className="text-[11px] font-bold uppercase tracking-widest text-rose-200 block mb-3">
+                    Jejaring Profesional
+                  </span>
+                  <div className="flex items-center gap-3">
+                    <a
+                      href={`https://wa.me/${personal.whatsapp}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="w-10 h-10 rounded-xl bg-white/20 hover:bg-white hover:text-emerald-600 text-white flex items-center justify-center text-base transition-all shadow-sm"
+                      title="WhatsApp Langsung"
+                    >
+                      <i className="fab fa-whatsapp"></i>
+                    </a>
+                    <a
+                      href={personal.socials.instagram}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="w-10 h-10 rounded-xl bg-white/20 hover:bg-white hover:text-pink-600 text-white flex items-center justify-center text-base transition-all shadow-sm"
+                      title="Instagram"
+                    >
+                      <i className="fab fa-instagram"></i>
+                    </a>
+                    <a
+                      href={personal.socials.linkedin}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="w-10 h-10 rounded-xl bg-white/20 hover:bg-white hover:text-blue-600 text-white flex items-center justify-center text-base transition-all shadow-sm"
+                      title="LinkedIn"
+                    >
+                      <i className="fab fa-linkedin-in"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <div className="lg:col-span-7 bg-white dark:bg-slate-900 p-8 sm:p-10 rounded-3xl border border-rose-100 dark:border-slate-800 shadow-sm flex flex-col justify-between">
+                
+                <div className="mb-6">
+                  <span className="text-xs font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400 block mb-2.5">
+                    ⚡ Pilih Topik Pesan Cepat (Klik untuk Mengisi Otomatis):
+                  </span>
+                  <div className="flex flex-wrap gap-2">
+                    {portfolioData.contactTemplates.map((tpl) => (
+                      <button
+                        key={tpl.id}
+                        type="button"
+                        onClick={() => handleSelectTemplate(tpl)}
+                        className="px-3 py-1.5 rounded-xl text-xs font-semibold bg-rose-50/80 dark:bg-slate-800 text-rose-700 dark:text-rose-300 border border-rose-200/80 dark:border-slate-700 hover:bg-rose-700 hover:text-white dark:hover:bg-rose-700 dark:hover:text-white transition-all shadow-2xs"
+                      >
+                        {tpl.label}
+                      </button>
+                    ))}
+                  </div>
+                </div>
+
+                <form onSubmit={handleSubmit} className="space-y-5">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                    <div>
+                      <label className="block text-xs font-bold uppercase tracking-wider text-slate-700 dark:text-slate-300 mb-1.5">
+                        Nama Lengkap <span className="text-rose-600">*</span>
+                      </label>
+                      <input
+                        type="text"
+                        required
+                        value={formData.name}
+                        onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                        placeholder="Contoh: Budi Santoso"
+                        className="w-full px-4 py-3 rounded-xl border border-rose-200 dark:border-slate-700 bg-rose-50/30 dark:bg-slate-800 text-slate-900 dark:text-white text-sm focus:outline-none focus:ring-2 focus:ring-rose-600 transition-all placeholder:text-slate-400"
+                      />
+                    </div>
+
+                    <div>
+                      <label className="block text-xs font-bold uppercase tracking-wider text-slate-700 dark:text-slate-300 mb-1.5">
+                        Alamat Email <span className="text-rose-600">*</span>
+                      </label>
+                      <input
+                        type="email"
+                        required
+                        value={formData.email}
+                        onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                        placeholder="nama@perusahaan.com"
+                        className="w-full px-4 py-3 rounded-xl border border-rose-200 dark:border-slate-700 bg-rose-50/30 dark:bg-slate-800 text-slate-900 dark:text-white text-sm focus:outline-none focus:ring-2 focus:ring-rose-600 transition-all placeholder:text-slate-400"
+                      />
+                    </div>
+                  </div>
+
+                  <div>
+                    <label className="block text-xs font-bold uppercase tracking-wider text-slate-700 dark:text-slate-300 mb-1.5">
+                      Subjek / Topik Kolaborasi
+                    </label>
+                    <input
+                      type="text"
+                      value={formData.subject}
+                      onChange={(e) => setFormData({ ...formData, subject: e.target.value })}
+                      placeholder="Contoh: Tawaran Magang / Riset / Proyek Kewirausahaan"
+                      className="w-full px-4 py-3 rounded-xl border border-rose-200 dark:border-slate-700 bg-rose-50/30 dark:bg-slate-800 text-slate-900 dark:text-white text-sm focus:outline-none focus:ring-2 focus:ring-rose-600 transition-all placeholder:text-slate-400"
+                    />
+                  </div>
+
+                  <div>
+                    <label className="block text-xs font-bold uppercase tracking-wider text-slate-700 dark:text-slate-300 mb-1.5">
+                      Pesan Anda <span className="text-rose-600">*</span>
+                    </label>
+                    <textarea
+                      rows="4"
+                      required
+                      value={formData.message}
+                      onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+                      placeholder="Tuliskan pesan, rincian tawaran, atau pertanyaan Anda di sini..."
+                      className="w-full px-4 py-3 rounded-xl border border-rose-200 dark:border-slate-700 bg-rose-50/30 dark:bg-slate-800 text-slate-900 dark:text-white text-sm focus:outline-none focus:ring-2 focus:ring-rose-600 transition-all resize-none placeholder:text-slate-400"
+                    ></textarea>
+                  </div>
+
+                  <div className="flex flex-col sm:flex-row gap-3 pt-2">
+                    <button
+                      type="submit"
+                      className="flex-1 py-3.5 px-6 rounded-xl bg-rose-700 hover:bg-rose-800 text-white text-xs font-bold uppercase tracking-wider shadow-lg shadow-rose-700/25 transition-all flex items-center justify-center gap-2"
+                    >
+                      <i className="fas fa-paper-plane"></i>
+                      <span>Kirim Pesan Formulir</span>
+                    </button>
+
+                    <button
+                      type="button"
+                      onClick={handleSendWhatsApp}
+                      className="py-3.5 px-6 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold uppercase tracking-wider shadow-md transition-all flex items-center justify-center gap-2"
+                    >
+                      <i className="fab fa-whatsapp text-sm"></i>
+                      <span>Chat Cepat via WhatsApp</span>
+                    </button>
+                  </div>
+
+                  {submitted && (
+                    <div className="p-4 rounded-xl bg-emerald-50 dark:bg-emerald-950/60 border border-emerald-200 dark:border-emerald-800 text-emerald-800 dark:text-emerald-300 text-xs font-semibold flex items-center gap-2">
+                      <i className="fas fa-check-circle text-base text-emerald-600"></i>
+                      <span>Terima kasih! Pesan Anda telah tersimpan dan siap diproses.</span>
+                    </div>
+                  )}
+                </form>
+
+              </div>
+
+            </div>
+          </div>
+        </section>
+      );
+    }
+
+    // 12. INTERACTIVE DECORATIONS
+    function InteractiveDecorations() {
+      const [enabled, setEnabled] = useState(true);
+      const [particles, setParticles] = useState([]);
+
+      useEffect(() => {
+        if (!enabled) {
+          setParticles([]);
+          return;
+        }
+        const count = window.innerWidth > 768 ? 8 : 4;
+        const items = Array.from({ length: count }).map((_, i) => ({
+          id: i,
+          x: Math.random() * (window.innerWidth - 60) + 30,
+          y: Math.random() * (window.innerHeight - 60) + 30,
+          size: Math.random() * 6 + 4,
+          opacity: Math.random() * 0.3 + 0.2,
+          duration: Math.random() * 4 + 4,
+          delay: Math.random() * 2
+        }));
+        setParticles(items);
+      }, [enabled]);
+
+      return (
+        <>
+          {enabled && (
+            <div className="fixed inset-0 pointer-events-none z-10 overflow-hidden no-print" aria-hidden="true">
+              {particles.map((p) => (
+                <div
+                  key={p.id}
+                  className="absolute rounded-full bg-gradient-to-tr from-rose-400 to-amber-300 filter blur-xs animate-pulse"
+                  style={{
+                    left: `${p.x}px`,
+                    top: `${p.y}px`,
+                    width: `${p.size}px`,
+                    height: `${p.size}px`,
+                    opacity: p.opacity,
+                    animationDuration: `${p.duration}s`,
+                    animationDelay: `${p.delay}s`
+                  }}
+                />
+              ))}
+            </div>
+          )}
+
+          <div className="fixed bottom-4 left-4 z-40 no-print">
+            <button
+              onClick={() => setEnabled(!enabled)}
+              className="px-3 py-1.5 rounded-full text-[10px] font-bold uppercase tracking-wider bg-white/85 dark:bg-slate-800/85 backdrop-blur-md border border-rose-100 dark:border-slate-700 text-slate-600 dark:text-slate-300 hover:text-rose-700 dark:hover:text-rose-400 shadow-xs flex items-center gap-1.5 transition-all"
+              title="Nyalakan / Matikan Efek Partikel Halus"
+            >
+              <span className="w-1.5 h-1.5 rounded-full bg-rose-600"></span>
+              <span>{enabled ? 'Efek: On' : 'Efek: Off'}</span>
+            </button>
+          </div>
+        </>
+      );
+    }
+
+    // 13. FOOTER
+    function Footer({ personal }) {
+      return (
+        <footer className="bg-slate-950 text-white pt-16 pb-12 border-t-4 border-rose-700 no-print">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="grid grid-cols-1 md:grid-cols-12 gap-10 pb-12 border-b border-slate-800">
+              
+              <div className="md:col-span-5">
+                <div className="flex items-center gap-2 mb-4">
+                  <span className="font-display font-bold text-2xl tracking-tight text-white">
+                    Ade<span className="text-rose-400">Sri.</span>
+                  </span>
+                </div>
+                
+                <p className="text-slate-400 text-xs sm:text-sm leading-relaxed mb-6 max-w-sm">
+                  Portofolio resmi dan rekam jejak akademik S1 Pendidikan Ekonomi Universitas Siliwangi. Berdedikasi pada inovasi kewirausahaan mahasiswa dan tata kelola organisasi.
+                </p>
+                
+                <div className="text-xs text-slate-400 flex items-center gap-2">
+                  <i className="fas fa-map-marker-alt text-rose-500"></i>
+                  <span>{personal.location}</span>
+                </div>
+              </div>
+
+              <div className="md:col-span-4 grid grid-cols-2 gap-4">
+                <div>
+                  <h4 className="text-xs font-bold uppercase tracking-widest text-amber-400 mb-3.5">
+                    Navigasi
+                  </h4>
+                  <ul className="space-y-2 text-xs text-slate-300">
+                    <li><a href="#beranda" className="hover:text-rose-400 transition-colors">Beranda</a></li>
+                    <li><a href="#tentang" className="hover:text-rose-400 transition-colors">Profil Saya</a></li>
+                    <li><a href="#pengalaman" className="hover:text-rose-400 transition-colors">Pengalaman</a></li>
+                  </ul>
+                </div>
+                <div>
+                  <h4 className="text-xs font-bold uppercase tracking-widest text-amber-400 mb-3.5">
+                    Karya
+                  </h4>
+                  <ul className="space-y-2 text-xs text-slate-300">
+                    <li><a href="#portofolio" className="hover:text-rose-400 transition-colors">Portofolio Proyek</a></li>
+                    <li><a href="#sertifikat" className="hover:text-rose-400 transition-colors">Sertifikat Resmi</a></li>
+                    <li><a href="#kontak" className="hover:text-rose-400 transition-colors">Hubungi Saya</a></li>
+                  </ul>
+                </div>
+              </div>
+
+              <div className="md:col-span-3 flex flex-col justify-between items-start md:items-end">
+                <div>
+                  <h4 className="text-xs font-bold uppercase tracking-widest text-amber-400 mb-3.5">
+                    Terhubung Langsung
+                  </h4>
+                  <div className="flex gap-2.5">
+                    <a
+                      href={`https://wa.me/${personal.whatsapp}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="w-10 h-10 rounded-xl bg-slate-800 hover:bg-emerald-600 text-slate-300 hover:text-white flex items-center justify-center text-sm transition-all"
+                      title="WhatsApp"
+                    >
+                      <i className="fab fa-whatsapp"></i>
+                    </a>
+                    <a
+                      href={personal.socials.instagram}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="w-10 h-10 rounded-xl bg-slate-800 hover:bg-rose-600 text-slate-300 hover:text-white flex items-center justify-center text-sm transition-all"
+                      title="Instagram"
+                    >
+                      <i className="fab fa-instagram"></i>
+                    </a>
+                    <a
+                      href={personal.socials.linkedin}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="w-10 h-10 rounded-xl bg-slate-800 hover:bg-blue-600 text-slate-300 hover:text-white flex items-center justify-center text-sm transition-all"
+                      title="LinkedIn"
+                    >
+                      <i className="fab fa-linkedin-in"></i>
+                    </a>
+                  </div>
+                </div>
+
+                <button
+                  onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+                  className="mt-6 md:mt-0 px-4 py-2.5 rounded-xl bg-slate-800 hover:bg-rose-700 text-slate-300 hover:text-white text-xs font-bold flex items-center gap-2 transition-all shadow-sm"
+                  title="Kembali ke Bagian Paling Atas"
+                >
+                  <i className="fas fa-arrow-up text-xs"></i>
+                  <span>Kembali ke Atas</span>
+                </button>
+              </div>
+
+            </div>
+
+            <div className="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500 gap-4">
+              <p>© {new Date().getFullYear()} Ade Sri Rahayu • Universitas Siliwangi. Hak Cipta Dilindungi.</p>
+              <p className="flex items-center gap-1.5">
+                <span>Didesain dengan Standar Portofolio Eksekutif</span>
+                <i className="fas fa-certificate text-rose-500 text-[10px]"></i>
+              </p>
+            </div>
+
+          </div>
+        </footer>
+      );
+    }
+
+    // 14. APP CONTAINER
+    function App() {
+      const [darkMode, setDarkMode] = useState(false);
+      const [selectedProject, setSelectedProject] = useState(null);
+      const [isCVOpen, setIsCVOpen] = useState(false);
+      const [toastMessage, setToastMessage] = useState(null);
+
+      useEffect(() => {
+        if (darkMode) {
+          document.documentElement.classList.add('dark');
+        } else {
+          document.documentElement.classList.remove('dark');
+        }
+      }, [darkMode]);
+
+      const showToast = (msg) => {
+        setToastMessage(msg);
+        setTimeout(() => {
+          setToastMessage(null);
+        }, 3000);
+      };
+
+      return (
+        <div className="min-h-screen bg-[#FCF9F7] dark:bg-[#090A0F] text-slate-900 dark:text-slate-100 transition-colors duration-300 font-sans selection:bg-rose-700 selection:text-white relative">
+          
+          <InteractiveDecorations />
+
+          <Navbar
+            onOpenCV={() => setIsCVOpen(true)}
+            darkMode={darkMode}
+            setDarkMode={setDarkMode}
+          />
+
+          <main>
+            <Hero
+              personal={portfolioData.personal}
+              onOpenCV={() => setIsCVOpen(true)}
+            />
+
+            <Stats
+              stats={portfolioData.stats}
+            />
+
+            <About
+              personal={portfolioData.personal}
+              onOpenCV={() => setIsCVOpen(true)}
+              onShowToast={showToast}
+            />
+
+            <Experience
+              education={portfolioData.education}
+              experiences={portfolioData.experiences}
+              committees={portfolioData.committees}
+            />
+
+            <Projects
+              projects={portfolioData.projects}
+              onSelectProject={(p) => setSelectedProject(p)}
+            />
+
+            <Certificates
+              certificates={portfolioData.certificates}
+            />
+
+            <Contact
+              personal={portfolioData.personal}
+              onShowToast={showToast}
+            />
+          </main>
+
+          <Footer
+            personal={portfolioData.personal}
+          />
+
+          {selectedProject && (
+            <ProjectModal
+              project={selectedProject}
+              onClose={() => setSelectedProject(null)}
+            />
+          )}
+
+          {isCVOpen && (
+            <CVModal
+              personal={portfolioData.personal}
+              education={portfolioData.education}
+              experiences={portfolioData.experiences}
+              committees={portfolioData.committees}
+              hardSkills={portfolioData.hardSkills}
+              softSkills={portfolioData.softSkills}
+              onClose={() => setIsCVOpen(false)}
+            />
+          )}
+
+          {toastMessage && (
+            <div className="fixed bottom-6 right-6 z-50 no-print toast-animate">
+              <div className="flex items-center gap-2.5 px-4 py-3 rounded-2xl bg-slate-900 text-white shadow-2xl border border-slate-700 text-xs font-semibold">
+                <span className="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
+                <span>{toastMessage}</span>
+              </div>
+            </div>
+          )}
+
+        </div>
+      );
+    }
+
+    // Mount React App to DOM
+    const root = ReactDOM.createRoot(document.getElementById('root'));
+    root.render(<App />);
+  </script>
+</body>
+</html>
