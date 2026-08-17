@@ -33,6 +33,14 @@
     tailwind.config = {
       darkMode: 'class',
       theme: {
+        screens: {
+          'xs': '480px',
+          'sm': '640px',
+          'md': '768px',
+          'lg': '950px', // Mobile Desktop Mode is 980px, enabling full laptop desktop layout on phone
+          'xl': '1200px',
+          '2xl': '1440px',
+        },
         extend: {
           colors: {
             theme: {
