@@ -2,7 +2,7 @@
 <html lang="id" class="scroll-smooth">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=1280, user-scalable=yes" />
   <title>Ade Sri Rahayu | Portofolio Profesional Pendidikan Ekonomi & Kewirausahaan</title>
   
   <!-- Meta SEO & Description -->
@@ -68,12 +68,19 @@
       --text-secondary: #CBD5E1;
     }
 
-    body {
+    html, body {
       font-family: 'Plus Jakarta Sans', sans-serif;
       background-color: var(--bg-primary);
       color: var(--text-primary);
-      overflow-x: hidden;
+      min-width: 1280px;
+      width: 100%;
       -webkit-font-smoothing: antialiased;
+      -webkit-text-size-adjust: 100%;
+    }
+
+    #root {
+      min-width: 1280px;
+      width: 100%;
     }
 
     /* Custom Scrollbar */
