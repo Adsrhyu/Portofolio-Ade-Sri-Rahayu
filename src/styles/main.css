@@ -41,21 +41,14 @@
   scroll-behavior: smooth;
 }
 
-html, body {
+body {
   font-family: 'Plus Jakarta Sans', sans-serif;
   background-color: var(--bg-primary);
   color: var(--text-primary);
   transition: background-color 0.3s ease, color 0.3s ease;
-  min-width: 1280px;
-  width: 100%;
+  overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  -webkit-text-size-adjust: 100%;
-}
-
-#root {
-  min-width: 1280px;
-  width: 100%;
 }
 
 /* Custom Scrollbar */
