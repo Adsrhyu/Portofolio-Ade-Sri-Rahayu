@@ -18,10 +18,14 @@
   <!-- Font Awesome 6 Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 
-  <!-- React 18 & Babel Standalone (Zero-Config Direct Browser Run) -->
-  <script src="https://unpkg.com/react@18/umd/react.production.min.js" crossorigin></script>
-  <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js" crossorigin></script>
-  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <!-- High-Speed Cloudflare CDN Preconnects -->
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin />
+  <link rel="preconnect" href="https://cdn.tailwindcss.com" crossorigin />
+
+  <!-- React 18 & Babel Standalone via Fast Cloudflare Edge CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/react/18.2.0/umd/react.production.min.js" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/18.2.0/umd/react-dom.production.min.js" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/7.23.10/babel.min.js" crossorigin="anonymous"></script>
 
   <!-- Tailwind CSS CDN with Custom Executive Tokens -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -236,9 +240,16 @@
   </style>
 </head>
 <body class="antialiased selection:bg-rose-700 selection:text-white">
-
-  <!-- React Root Container -->
-  <div id="root"></div>
+  <!-- React Root Container with Instant Lightweight Preloader -->
+  <div id="root">
+    <div style="min-height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center; background: #FCF9F7; font-family: 'Plus Jakarta Sans', system-ui, sans-serif; text-align: center; padding: 20px;">
+      <div style="position: relative; width: 56px; height: 56px; margin-bottom: 20px;">
+        <div style="position: absolute; inset: 0; border-radius: 50%; border: 4px solid #FFE4E9; border-top-color: #BE123C; animation: spin 0.8s linear infinite;"></div>
+      </div>
+      <h3 style="font-size: 18px; font-weight: 800; color: #9F1239; margin: 0 0 6px 0; letter-spacing: -0.02em;">Ade Sri Rahayu</h3>
+      <p style="font-size: 12px; font-weight: 600; color: #64748B; margin: 0; text-transform: uppercase; letter-spacing: 0.1em;">Pendidikan Ekonomi Universitas Siliwangi</p>
+    </div>
+  </div>
 
   <!-- React Application Core Script (Transpiled with Babel Standalone) -->
   <script type="text/babel">
@@ -836,6 +847,8 @@
                       <img
                         src={photoSrc}
                         alt={personal.name}
+                        loading="eager"
+                        decoding="async"
                         className="w-full h-full rounded-full object-cover object-[center_18%] scale-[1.25] transition-transform duration-500 hover:scale-[1.32]"
                         onError={(e) => {
                           e.target.onerror = null;
@@ -948,6 +961,8 @@
                       <img
                         src={photoSrc}
                         alt={personal.name}
+                        loading="lazy"
+                        decoding="async"
                         className="w-full h-full object-cover object-top hover:scale-105 transition-transform duration-500"
                         onError={(e) => {
                           e.target.onerror = null;
@@ -1168,6 +1183,8 @@
                           <img
                             src="./assets/ade-hero.jpg"
                             alt="Dokumentasi HMJ DIKMI 1"
+                            loading="lazy"
+                            decoding="async"
                             className="w-full h-full object-cover object-[center_20%] group-hover:scale-105 transition-transform duration-500"
                           />
                         </div>
@@ -1175,6 +1192,8 @@
                           <img
                             src="./assets/ade-about.jpg"
                             alt="Dokumentasi HMJ DIKMI 2"
+                            loading="lazy"
+                            decoding="async"
                             className="w-full h-full object-cover object-[center_70%] group-hover:scale-105 transition-transform duration-500"
                           />
                         </div>
@@ -1182,6 +1201,8 @@
                           <img
                             src="./assets/ade-yellow.jpg"
                             alt="Dokumentasi HMJ DIKMI 3"
+                            loading="lazy"
+                            decoding="async"
                             className="w-full h-full object-cover object-[center_15%] group-hover:scale-105 transition-transform duration-500"
                           />
                         </div>
@@ -1189,6 +1210,8 @@
                           <img
                             src="./assets/ade-white.jpg"
                             alt="Dokumentasi HMJ DIKMI 4"
+                            loading="lazy"
+                            decoding="async"
                             className="w-full h-full object-cover object-[center_65%] group-hover:scale-105 transition-transform duration-500"
                           />
                         </div>
@@ -1228,15 +1251,19 @@
                         <div className="group relative rounded-2xl overflow-hidden bg-slate-900 border border-rose-100 dark:border-slate-700 shadow-sm hover:shadow-md transition-all duration-300 h-32 sm:h-36">
                           <img
                             src="./assets/ade-yellow.jpg"
-                            alt="Dokumentasi KOPMA UNSIL 1"
-                            className="w-full h-full object-cover object-[center_20%] group-hover:scale-105 transition-transform duration-500"
+                            alt="Dokumentasi KOPMA 1"
+                            loading="lazy"
+                            decoding="async"
+                            className="w-full h-full object-cover object-[center_15%] group-hover:scale-105 transition-transform duration-500"
                           />
                         </div>
                         <div className="group relative rounded-2xl overflow-hidden bg-slate-900 border border-rose-100 dark:border-slate-700 shadow-sm hover:shadow-md transition-all duration-300 h-32 sm:h-36">
                           <img
                             src="./assets/ade-white.jpg"
-                            alt="Dokumentasi KOPMA UNSIL 2"
-                            className="w-full h-full object-cover object-[center_70%] group-hover:scale-105 transition-transform duration-500"
+                            alt="Dokumentasi KOPMA 2"
+                            loading="lazy"
+                            decoding="async"
+                            className="w-full h-full object-cover object-[center_65%] group-hover:scale-105 transition-transform duration-500"
                           />
                         </div>
                       </div>
