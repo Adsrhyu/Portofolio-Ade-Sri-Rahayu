@@ -2,7 +2,7 @@
 <html lang="id" class="scroll-smooth">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=1280, user-scalable=yes" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Ade Sri Rahayu | Portofolio Profesional Pendidikan Ekonomi & Kewirausahaan</title>
   
   <!-- Meta SEO & Description -->
@@ -68,19 +68,12 @@
       --text-secondary: #CBD5E1;
     }
 
-    html, body {
+    body {
       font-family: 'Plus Jakarta Sans', sans-serif;
       background-color: var(--bg-primary);
       color: var(--text-primary);
-      min-width: 1280px;
-      width: 100%;
+      overflow-x: hidden;
       -webkit-font-smoothing: antialiased;
-      -webkit-text-size-adjust: 100%;
-    }
-
-    #root {
-      min-width: 1280px;
-      width: 100%;
     }
 
     /* Custom Scrollbar */
@@ -750,13 +743,12 @@
               {/* Left Column: Typography & Animated Identity */}
               <div className="flex-1 text-center lg:text-left max-w-xl">
                 
-                {/* Top Minimal Pill Tag */}
+                {/* Top Minimal Pill Tag (Clean without emote love) */}
                 <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-rose-50 dark:bg-slate-800/90 border border-rose-200 dark:border-slate-700 shadow-xs mb-4 animate-float-text">
                   <span className="text-rose-600 dark:text-rose-400 text-xs animate-twinkle">✦</span>
                   <span className="text-[11px] sm:text-xs font-bold uppercase tracking-widest text-rose-800 dark:text-rose-300">
                     Official Portfolio
                   </span>
-                  <i className="fas fa-heart text-rose-500 text-xs"></i>
                 </div>
 
                 {/* PORTOFOLIO Title - Bold, Animated Motion Gradient & Subtle Float */}
@@ -776,11 +768,11 @@
                   <div className="w-8 h-1 bg-rose-200 dark:bg-slate-700 rounded-full"></div>
                 </div>
 
-                {/* Academic Info Card */}
+                {/* Academic Info Card with Official UNSIL Logo */}
                 <div className="inline-flex flex-col sm:flex-row items-center lg:items-start gap-2 sm:gap-4 p-3.5 sm:px-5 sm:py-3 rounded-2xl bg-white/80 dark:bg-slate-800/80 border border-rose-100 dark:border-slate-700/80 shadow-sm backdrop-blur-sm">
                   <div className="flex items-center gap-3">
-                    <div className="w-10 h-10 rounded-xl bg-gradient-to-tr from-rose-600 to-pink-500 text-white flex items-center justify-center text-sm shadow-xs flex-shrink-0">
-                      <i className="fas fa-graduation-cap"></i>
+                    <div className="w-10 h-10 sm:w-11 sm:h-11 rounded-xl bg-white dark:bg-slate-800 p-1 flex items-center justify-center shadow-xs flex-shrink-0 border border-rose-100 dark:border-slate-700">
+                      <img src="./assets/logo-unsil.png" alt="Logo Universitas Siliwangi" className="w-full h-full object-contain" />
                     </div>
                     <div className="text-left">
                       <div className="text-base sm:text-lg font-bold text-slate-900 dark:text-white leading-tight">
