@@ -11,7 +11,7 @@ export const portfolioData = {
     title: "Pendidikan Ekonomi",
     portfolioName: "Portofolio Ade Sri Rahayu",
     tagline: "Kandidat Berintegritas, Teliti, dan Siap Berkontribusi Nyata.",
-    bio: "Mahasiswa S1 Pendidikan Ekonomi Universitas Siliwangi dengan rekam jejak kepemimpinan 2 periode di Divisi Kewirausahaan (DIKMI Mart) dan 7+ kepanitiaan universitas hingga nasional. Menguasai pengolahan data & administrasi (Excel, Word, PowerPoint), komunikasi efektif, serta manajemen waktu yang disiplin. Siap memberikan dampak positif dan kinerja prima sejak hari pertama bekerja.",
+    bio: "Mahasiswa S1 Pendidikan Ekonomi Universitas Siliwangi dengan rekam jejak kepemimpinan 2 periode di Divisi Kewirausahaan (DIKMI Mart) dan 6+ kepanitiaan universitas hingga nasional. Menguasai pengolahan data & administrasi (Excel, Word, PowerPoint), komunikasi efektif, serta manajemen waktu yang disiplin. Siap memberikan dampak positif dan kinerja prima sejak hari pertama bekerja.",
     hrPromise: "Berkomitmen menghadirkan etos kerja tinggi, ketelitian administratif, dan kepemimpinan adaptif untuk mendukung pencapaian target strategis divisi Anda.",
     photoUrl: "./assets/ade-about.jpg",
     photoHeroUrl: "./assets/ade-hero.jpg",
@@ -38,7 +38,7 @@ export const portfolioData = {
   stats: [
     { label: "Indeks Prestasi Kumulatif", value: "3.82", unit: "IPK", desc: "Dari skala 4.00 (Konsistensi Akademik)" },
     { label: "Pengalaman Organisasi", value: "2", unit: "Periode", desc: "Divisi Kewirausahaan HMJ DIKMI" },
-    { label: "Kepanitiaan & Program", value: "7+", unit: "Event", desc: "Tingkat Fakultas, Univ, & Nasional" },
+    { label: "Kepanitiaan & Program", value: "6+", unit: "Event", desc: "Tingkat Fakultas, Univ, & Nasional" },
     { label: "Portofolio & Studi Kasus", value: "6+", unit: "Karya", desc: "PKM-K, Bisnis Digital, & Modul Ajar" }
   ],
 
@@ -188,7 +188,8 @@ export const portfolioData = {
       year: "2024 & 2025",
       scope: "Fakultas / Universitas",
       category: "Kewirausahaan & Kaderisasi",
-      desc: "Bertanggung jawab membimbing, mengoordinasikan, dan menyusun timeline pengusulan proposal PKM Kewirausahaan bagi mahasiswa baru hingga tahap seleksi proposal."
+      desc: "Bertanggung jawab membimbing, mengoordinasikan, dan menyusun timeline pengusulan proposal PKM Kewirausahaan bagi mahasiswa baru hingga tahap seleksi proposal.",
+      certificateUrl: "#sertifikat"
     },
     {
       id: "danus-gpe",
@@ -197,7 +198,8 @@ export const portfolioData = {
       year: "2024 & 2025",
       scope: "Fakultas / Regional",
       category: "Penggalangan Dana & Usaha",
-      desc: "Menyusun strategi penggalangan dana kreatif melalui bazar kuliner, penjualan produk merchandise, dan koordinasi penawaran sponsorship untuk mendukung pendanaan acara tahunan terbesar jurusan."
+      desc: "Menyusun strategi penggalangan dana kreatif melalui bazar kuliner, penjualan produk merchandise, dan koordinasi penawaran sponsorship untuk mendukung pendanaan acara tahunan terbesar jurusan.",
+      certificateUrl: "#sertifikat"
     },
     {
       id: "humas-ombus",
@@ -206,7 +208,8 @@ export const portfolioData = {
       year: "2024 & 2025",
       scope: "Jurusan",
       category: "Komunikasi Publik",
-      desc: "Menjadi penghubung komunikasi utama antara panitia, dosen pembimbing, dan ratusan mahasiswa baru, serta mengelola publikasi informasi resmi orientasi akademik."
+      desc: "Menjadi penghubung komunikasi utama antara panitia, dosen pembimbing, dan ratusan mahasiswa baru, serta mengelola publikasi informasi resmi orientasi akademik.",
+      certificateUrl: "#sertifikat"
     },
     {
       id: "bendahara-rakernas",
@@ -215,7 +218,8 @@ export const portfolioData = {
       year: "2024",
       scope: "Nasional",
       category: "Tata Kelola Keuangan",
-      desc: "Mengelola keseluruhan perputaran anggaran dana kegiatan berskala nasional, merancang Rencana Anggaran Biaya (RAB), memverifikasi bukti transaksi, dan menyusun Laporan Pertanggungjawaban (LPJ) keuangan audit."
+      desc: "Mengelola keseluruhan perputaran anggaran dana kegiatan berskala nasional, merancang Rencana Anggaran Biaya (RAB), memverifikasi bukti transaksi, dan menyusun Laporan Pertanggungjawaban (LPJ) keuangan audit.",
+      certificateUrl: "#sertifikat"
     },
     {
       id: "pj-foe",
@@ -224,16 +228,8 @@ export const portfolioData = {
       year: "2024",
       scope: "Universitas",
       category: "Event & Workshop",
-      desc: "Mengonsep materi workshop kewirausahaan pemuda, berkoordinasi dengan praktisi bisnis narasumber, serta mengarahkan alur teknis acara bagi 150+ peserta mahasiswa."
-    },
-    {
-      id: "ppm-unsil",
-      role: "Seksi Hubungan Masyarakat & Seksi Konsumsi",
-      event: "Panitia Pengabdian Masyarakat",
-      year: "2024 & 2025",
-      scope: "Masyarakat / Wilayah Binaan",
-      category: "Sosial & Logistik",
-      desc: "Mengoordinasikan penyediaan konsumsi higienis bagi ratusan warga dan delegasi serta menjalin relasi harmonis dengan tokoh masyarakat setempat."
+      desc: "Mengonsep materi workshop kewirausahaan pemuda, berkoordinasi dengan praktisi bisnis narasumber, serta mengarahkan alur teknis acara bagi 150+ peserta mahasiswa.",
+      certificateUrl: "#sertifikat"
     },
     {
       id: "pubdekdok-kopma",
@@ -242,7 +238,8 @@ export const portfolioData = {
       year: "2024",
       scope: "Universitas",
       category: "Publikasi & Desain",
-      desc: "Merancang identitas visual banner panggung, materi publikasi digital, dan mendokumentasikan jalannya seluruh rangkaian agenda temu anggota koperasi."
+      desc: "Merancang identitas visual banner panggung, materi publikasi digital, dan mendokumentasikan jalannya seluruh rangkaian agenda temu anggota koperasi.",
+      certificateUrl: "#sertifikat"
     }
   ],
 

@@ -18,10 +18,14 @@
   <!-- Font Awesome 6 Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 
-  <!-- React 18 & Babel Standalone (Zero-Config Direct Browser Run) -->
-  <script src="https://unpkg.com/react@18/umd/react.production.min.js" crossorigin></script>
-  <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js" crossorigin></script>
-  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <!-- High-Speed Cloudflare CDN Preconnects -->
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin />
+  <link rel="preconnect" href="https://cdn.tailwindcss.com" crossorigin />
+
+  <!-- React 18 & Babel Standalone via Fast Cloudflare Edge CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/react/18.2.0/umd/react.production.min.js" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/18.2.0/umd/react-dom.production.min.js" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/7.23.10/babel.min.js" crossorigin="anonymous"></script>
 
   <!-- Tailwind CSS CDN with Custom Executive Tokens -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -29,6 +33,14 @@
     tailwind.config = {
       darkMode: 'class',
       theme: {
+        screens: {
+          'xs': '480px',
+          'sm': '640px',
+          'md': '768px',
+          'lg': '950px', // Mobile Desktop Mode is 980px, enabling full laptop desktop layout on phone
+          'xl': '1200px',
+          '2xl': '1440px',
+        },
         extend: {
           colors: {
             theme: {
@@ -236,9 +248,16 @@
   </style>
 </head>
 <body class="antialiased selection:bg-rose-700 selection:text-white">
-
-  <!-- React Root Container -->
-  <div id="root"></div>
+  <!-- React Root Container with Instant Lightweight Preloader -->
+  <div id="root">
+    <div style="min-height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center; background: #FCF9F7; font-family: 'Plus Jakarta Sans', system-ui, sans-serif; text-align: center; padding: 20px;">
+      <div style="position: relative; width: 56px; height: 56px; margin-bottom: 20px;">
+        <div style="position: absolute; inset: 0; border-radius: 50%; border: 4px solid #FFE4E9; border-top-color: #BE123C; animation: spin 0.8s linear infinite;"></div>
+      </div>
+      <h3 style="font-size: 18px; font-weight: 800; color: #9F1239; margin: 0 0 6px 0; letter-spacing: -0.02em;">Ade Sri Rahayu</h3>
+      <p style="font-size: 12px; font-weight: 600; color: #64748B; margin: 0; text-transform: uppercase; letter-spacing: 0.1em;">Pendidikan Ekonomi Universitas Siliwangi</p>
+    </div>
+  </div>
 
   <!-- React Application Core Script (Transpiled with Babel Standalone) -->
   <script type="text/babel">
@@ -252,7 +271,7 @@
         title: "Pendidikan Ekonomi",
         portfolioName: "Portofolio Ade Sri Rahayu",
         tagline: "Kandidat Berintegritas, Teliti, dan Siap Berkontribusi Nyata.",
-        bio: "Mahasiswa S1 Pendidikan Ekonomi Universitas Siliwangi dengan rekam jejak kepemimpinan 2 periode di Divisi Kewirausahaan (DIKMI Mart) dan 7+ kepanitiaan universitas hingga nasional. Menguasai pengolahan data & administrasi (Excel, Word, PowerPoint), komunikasi efektif, serta manajemen waktu yang disiplin. Siap memberikan dampak positif dan kinerja prima sejak hari pertama bekerja.",
+        bio: "Mahasiswa S1 Pendidikan Ekonomi Universitas Siliwangi dengan rekam jejak kepemimpinan 2 periode di Divisi Kewirausahaan (DIKMI Mart) dan 6+ kepanitiaan universitas hingga nasional. Menguasai pengolahan data & administrasi (Excel, Word, PowerPoint), komunikasi efektif, serta manajemen waktu yang disiplin. Siap memberikan dampak positif dan kinerja prima sejak hari pertama bekerja.",
         hrPromise: "Berkomitmen menghadirkan etos kerja tinggi, ketelitian administratif, dan kepemimpinan adaptif untuk mendukung pencapaian target strategis divisi Anda.",
         photoUrl: "./assets/ade-about.jpg",
         photoHeroUrl: "./assets/ade-hero.jpg",
@@ -278,7 +297,7 @@
       stats: [
         { label: "Indeks Prestasi Kumulatif", value: "3.82", unit: "IPK", desc: "Dari skala 4.00 (Konsistensi Akademik)" },
         { label: "Pengalaman Organisasi", value: "2", unit: "Periode", desc: "Divisi Kewirausahaan HMJ DIKMI" },
-        { label: "Kepanitiaan & Program", value: "7+", unit: "Event", desc: "Tingkat Fakultas, Univ, & Nasional" },
+        { label: "Kepanitiaan & Program", value: "6+", unit: "Event", desc: "Tingkat Fakultas, Univ, & Nasional" },
         { label: "Portofolio & Studi Kasus", value: "6+", unit: "Karya", desc: "PKM-K, Bisnis Digital, & Modul Ajar" }
       ],
 
@@ -350,7 +369,8 @@
           year: "2024 & 2025",
           scope: "Fakultas / Universitas",
           category: "Kewirausahaan & Kaderisasi",
-          desc: "Bertanggung jawab membimbing, mengoordinasikan, dan menyusun timeline pengusulan proposal PKM Kewirausahaan bagi mahasiswa baru hingga tahap seleksi proposal."
+          desc: "Bertanggung jawab membimbing, mengoordinasikan, dan menyusun timeline pengusulan proposal PKM Kewirausahaan bagi mahasiswa baru hingga tahap seleksi proposal.",
+          certificateUrl: "#sertifikat"
         },
         {
           id: "danus-gpe",
@@ -359,7 +379,8 @@
           year: "2024 & 2025",
           scope: "Fakultas / Regional",
           category: "Penggalangan Dana & Usaha",
-          desc: "Menyusun strategi penggalangan dana kreatif melalui bazar kuliner, penjualan produk merchandise, dan koordinasi penawaran sponsorship untuk mendukung pendanaan acara tahunan terbesar jurusan."
+          desc: "Menyusun strategi penggalangan dana kreatif melalui bazar kuliner, penjualan produk merchandise, dan koordinasi penawaran sponsorship untuk mendukung pendanaan acara tahunan terbesar jurusan.",
+          certificateUrl: "#sertifikat"
         },
         {
           id: "humas-ombus",
@@ -368,7 +389,8 @@
           year: "2024 & 2025",
           scope: "Jurusan",
           category: "Komunikasi Publik",
-          desc: "Menjadi penghubung komunikasi utama antara panitia, dosen pembimbing, dan ratusan mahasiswa baru, serta mengelola publikasi informasi resmi orientasi akademik."
+          desc: "Menjadi penghubung komunikasi utama antara panitia, dosen pembimbing, dan ratusan mahasiswa baru, serta mengelola publikasi informasi resmi orientasi akademik.",
+          certificateUrl: "#sertifikat"
         },
         {
           id: "bendahara-rakernas",
@@ -377,7 +399,8 @@
           year: "2024",
           scope: "Nasional",
           category: "Tata Kelola Keuangan",
-          desc: "Mengelola keseluruhan perputaran anggaran dana kegiatan berskala nasional, merancang Rencana Anggaran Biaya (RAB), memverifikasi bukti transaksi, dan menyusun Laporan Pertanggungjawaban (LPJ) keuangan audit."
+          desc: "Mengelola keseluruhan perputaran anggaran dana kegiatan berskala nasional, merancang Rencana Anggaran Biaya (RAB), memverifikasi bukti transaksi, dan menyusun Laporan Pertanggungjawaban (LPJ) keuangan audit.",
+          certificateUrl: "#sertifikat"
         },
         {
           id: "pj-foe",
@@ -386,16 +409,8 @@
           year: "2024",
           scope: "Universitas",
           category: "Event & Workshop",
-          desc: "Mengonsep materi workshop kewirausahaan pemuda, berkoordinasi dengan praktisi bisnis narasumber, serta mengarahkan alur teknis acara bagi 150+ peserta mahasiswa."
-        },
-        {
-          id: "ppm-unsil",
-          role: "Seksi Hubungan Masyarakat & Seksi Konsumsi",
-          event: "Panitia Pengabdian Masyarakat",
-          year: "2024 & 2025",
-          scope: "Masyarakat / Wilayah Binaan",
-          category: "Sosial & Logistik",
-          desc: "Mengoordinasikan penyediaan konsumsi higienis bagi ratusan warga dan delegasi serta menjalin relasi harmonis dengan tokoh masyarakat setempat."
+          desc: "Mengonsep materi workshop kewirausahaan pemuda, berkoordinasi dengan praktisi bisnis narasumber, serta mengarahkan alur teknis acara bagi 150+ peserta mahasiswa.",
+          certificateUrl: "#sertifikat"
         },
         {
           id: "pubdekdok-kopma",
@@ -404,7 +419,8 @@
           year: "2024",
           scope: "Universitas",
           category: "Publikasi & Desain",
-          desc: "Merancang identitas visual banner panggung, materi publikasi digital, dan mendokumentasikan jalannya seluruh rangkaian agenda temu anggota koperasi."
+          desc: "Merancang identitas visual banner panggung, materi publikasi digital, dan mendokumentasikan jalannya seluruh rangkaian agenda temu anggota koperasi.",
+          certificateUrl: "#sertifikat"
         }
       ],
 
@@ -743,13 +759,12 @@
               {/* Left Column: Typography & Animated Identity */}
               <div className="flex-1 text-center lg:text-left max-w-xl">
                 
-                {/* Top Minimal Pill Tag */}
+                {/* Top Minimal Pill Tag (Clean without emote love) */}
                 <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-rose-50 dark:bg-slate-800/90 border border-rose-200 dark:border-slate-700 shadow-xs mb-4 animate-float-text">
                   <span className="text-rose-600 dark:text-rose-400 text-xs animate-twinkle">✦</span>
                   <span className="text-[11px] sm:text-xs font-bold uppercase tracking-widest text-rose-800 dark:text-rose-300">
                     Official Portfolio
                   </span>
-                  <i className="fas fa-heart text-rose-500 text-xs"></i>
                 </div>
 
                 {/* PORTOFOLIO Title - Bold, Animated Motion Gradient & Subtle Float */}
@@ -769,11 +784,11 @@
                   <div className="w-8 h-1 bg-rose-200 dark:bg-slate-700 rounded-full"></div>
                 </div>
 
-                {/* Academic Info Card */}
+                {/* Academic Info Card with Official UNSIL Logo */}
                 <div className="inline-flex flex-col sm:flex-row items-center lg:items-start gap-2 sm:gap-4 p-3.5 sm:px-5 sm:py-3 rounded-2xl bg-white/80 dark:bg-slate-800/80 border border-rose-100 dark:border-slate-700/80 shadow-sm backdrop-blur-sm">
                   <div className="flex items-center gap-3">
-                    <div className="w-10 h-10 rounded-xl bg-gradient-to-tr from-rose-600 to-pink-500 text-white flex items-center justify-center text-sm shadow-xs flex-shrink-0">
-                      <i className="fas fa-graduation-cap"></i>
+                    <div className="w-10 h-10 sm:w-11 sm:h-11 rounded-xl bg-white dark:bg-slate-800 p-1 flex items-center justify-center shadow-xs flex-shrink-0 border border-rose-100 dark:border-slate-700">
+                      <img src="./assets/logo-unsil.png" alt="Logo Universitas Siliwangi" className="w-full h-full object-contain" />
                     </div>
                     <div className="text-left">
                       <div className="text-base sm:text-lg font-bold text-slate-900 dark:text-white leading-tight">
@@ -837,6 +852,8 @@
                       <img
                         src={photoSrc}
                         alt={personal.name}
+                        loading="eager"
+                        decoding="async"
                         className="w-full h-full rounded-full object-cover object-[center_18%] scale-[1.25] transition-transform duration-500 hover:scale-[1.32]"
                         onError={(e) => {
                           e.target.onerror = null;
@@ -949,6 +966,8 @@
                       <img
                         src={photoSrc}
                         alt={personal.name}
+                        loading="lazy"
+                        decoding="async"
                         className="w-full h-full object-cover object-top hover:scale-105 transition-transform duration-500"
                         onError={(e) => {
                           e.target.onerror = null;
@@ -1169,6 +1188,8 @@
                           <img
                             src="./assets/ade-hero.jpg"
                             alt="Dokumentasi HMJ DIKMI 1"
+                            loading="lazy"
+                            decoding="async"
                             className="w-full h-full object-cover object-[center_20%] group-hover:scale-105 transition-transform duration-500"
                           />
                         </div>
@@ -1176,6 +1197,8 @@
                           <img
                             src="./assets/ade-about.jpg"
                             alt="Dokumentasi HMJ DIKMI 2"
+                            loading="lazy"
+                            decoding="async"
                             className="w-full h-full object-cover object-[center_70%] group-hover:scale-105 transition-transform duration-500"
                           />
                         </div>
@@ -1183,6 +1206,8 @@
                           <img
                             src="./assets/ade-yellow.jpg"
                             alt="Dokumentasi HMJ DIKMI 3"
+                            loading="lazy"
+                            decoding="async"
                             className="w-full h-full object-cover object-[center_15%] group-hover:scale-105 transition-transform duration-500"
                           />
                         </div>
@@ -1190,6 +1215,8 @@
                           <img
                             src="./assets/ade-white.jpg"
                             alt="Dokumentasi HMJ DIKMI 4"
+                            loading="lazy"
+                            decoding="async"
                             className="w-full h-full object-cover object-[center_65%] group-hover:scale-105 transition-transform duration-500"
                           />
                         </div>
@@ -1229,15 +1256,19 @@
                         <div className="group relative rounded-2xl overflow-hidden bg-slate-900 border border-rose-100 dark:border-slate-700 shadow-sm hover:shadow-md transition-all duration-300 h-32 sm:h-36">
                           <img
                             src="./assets/ade-yellow.jpg"
-                            alt="Dokumentasi KOPMA UNSIL 1"
-                            className="w-full h-full object-cover object-[center_20%] group-hover:scale-105 transition-transform duration-500"
+                            alt="Dokumentasi KOPMA 1"
+                            loading="lazy"
+                            decoding="async"
+                            className="w-full h-full object-cover object-[center_15%] group-hover:scale-105 transition-transform duration-500"
                           />
                         </div>
                         <div className="group relative rounded-2xl overflow-hidden bg-slate-900 border border-rose-100 dark:border-slate-700 shadow-sm hover:shadow-md transition-all duration-300 h-32 sm:h-36">
                           <img
                             src="./assets/ade-white.jpg"
-                            alt="Dokumentasi KOPMA UNSIL 2"
-                            className="w-full h-full object-cover object-[center_70%] group-hover:scale-105 transition-transform duration-500"
+                            alt="Dokumentasi KOPMA 2"
+                            loading="lazy"
+                            decoding="async"
+                            className="w-full h-full object-cover object-[center_65%] group-hover:scale-105 transition-transform duration-500"
                           />
                         </div>
                       </div>
@@ -1263,12 +1294,12 @@
                       Committee Experience
                     </h3>
                     <p className="text-xs text-slate-500 dark:text-slate-400 font-medium">
-                      7+ Event Committees across National, Regional, and Campus Scales
+                      {committees.length}+ Event Committees across National, Regional, and Campus Scales
                     </p>
                   </div>
                 </div>
                 <span className="hidden sm:inline-flex text-xs font-bold text-rose-700 dark:text-rose-400 bg-rose-50 dark:bg-slate-800 px-3 py-1 rounded-full border border-rose-200/60 dark:border-slate-700">
-                  7+ Events
+                  {committees.length} Events
                 </span>
               </div>
 
@@ -1303,11 +1334,17 @@
                       </p>
                     </div>
 
-                    <div className="pt-3 border-t border-rose-50 dark:border-slate-700 flex items-center justify-between text-[11px]">
-                      <span className="text-slate-500 dark:text-slate-400 font-medium">Kategori: {com.category}</span>
-                      <span className="text-rose-600 dark:text-rose-400 font-bold flex items-center gap-1">
-                        <i className="fas fa-check"></i> Selesai
-                      </span>
+                    <div className="pt-3.5 border-t border-rose-100 dark:border-slate-700/80">
+                      <a
+                        href={com.certificateUrl || "#sertifikat"}
+                        target={com.certificateUrl && !com.certificateUrl.startsWith('#') ? "_blank" : undefined}
+                        rel="noopener noreferrer"
+                        className="w-full inline-flex items-center justify-center gap-2 py-2.5 px-4 rounded-xl bg-rose-50/90 hover:bg-rose-100 dark:bg-rose-950/40 dark:hover:bg-rose-900/60 text-rose-700 dark:text-rose-300 font-bold text-xs transition-all duration-200 border border-rose-200/80 dark:border-rose-800/60 hover:shadow-xs group/btn cursor-pointer"
+                      >
+                        <i className="fas fa-award text-rose-600 dark:text-rose-400 group-hover/btn:scale-110 group-hover/btn:rotate-12 transition-all"></i>
+                        <span>Lihat Sertifikat</span>
+                        <i className="fas fa-arrow-up-right-from-square text-[10px] opacity-70 group-hover/btn:opacity-100 group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5 transition-all"></i>
+                      </a>
                     </div>
                   </div>
                 ))}

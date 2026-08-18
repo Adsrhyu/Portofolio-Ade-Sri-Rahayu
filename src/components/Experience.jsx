@@ -187,12 +187,12 @@ export function Experience({ experiences, committees }) {
                   Committee Experience
                 </h3>
                 <p className="text-xs text-slate-500 dark:text-slate-400 font-medium">
-                  7+ Event Committees across National, Regional, and Campus Scales
+                  {committees.length}+ Event Committees across National, Regional, and Campus Scales
                 </p>
               </div>
             </div>
             <span className="hidden sm:inline-flex text-xs font-bold text-rose-700 dark:text-rose-400 bg-rose-50 dark:bg-slate-800 px-3 py-1 rounded-full border border-rose-200/60 dark:border-slate-700">
-              7+ Events
+              {committees.length} Events
             </span>
           </div>
 
@@ -227,11 +227,17 @@ export function Experience({ experiences, committees }) {
                   </p>
                 </div>
 
-                <div className="pt-3 border-t border-rose-50 dark:border-slate-700 flex items-center justify-between text-[11px]">
-                  <span className="text-slate-500 dark:text-slate-400 font-medium">Kategori: {com.category}</span>
-                  <span className="text-rose-600 dark:text-rose-400 font-bold flex items-center gap-1">
-                    <i className="fas fa-check"></i> Selesai
-                  </span>
+                <div className="pt-3.5 border-t border-rose-100 dark:border-slate-700/80">
+                  <a
+                    href={com.certificateUrl || "#sertifikat"}
+                    target={com.certificateUrl && !com.certificateUrl.startsWith('#') ? "_blank" : undefined}
+                    rel="noopener noreferrer"
+                    className="w-full inline-flex items-center justify-center gap-2 py-2.5 px-4 rounded-xl bg-rose-50/90 hover:bg-rose-100 dark:bg-rose-950/40 dark:hover:bg-rose-900/60 text-rose-700 dark:text-rose-300 font-bold text-xs transition-all duration-200 border border-rose-200/80 dark:border-rose-800/60 hover:shadow-xs group/btn cursor-pointer"
+                  >
+                    <i className="fas fa-award text-rose-600 dark:text-rose-400 group-hover/btn:scale-110 group-hover/btn:rotate-12 transition-all"></i>
+                    <span>Lihat Sertifikat</span>
+                    <i className="fas fa-arrow-up-right-from-square text-[10px] opacity-70 group-hover/btn:opacity-100 group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5 transition-all"></i>
+                  </a>
                 </div>
               </div>
             ))}
