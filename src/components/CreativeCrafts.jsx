@@ -95,7 +95,7 @@ function CraftCard({ craft, onSelectCraft }) {
       className="bg-white dark:bg-slate-900 rounded-3xl overflow-hidden border border-rose-100 dark:border-slate-800 shadow-md hover:shadow-2xl hover:border-rose-400 dark:hover:border-rose-600 transition-all duration-300 flex flex-col justify-between group cursor-pointer transform hover:-translate-y-1.5"
     >
       {/* Visual Photo Work - Zero Letterboxing, Exact Natural Aspect Ratio */}
-      <div className="relative w-full overflow-hidden bg-rose-50/40 dark:bg-slate-800/40">
+      <div className="relative w-full overflow-hidden bg-rose-50/30 dark:bg-slate-800/30">
         
         {/* Live Canvas for rendered PDF photo - Edge to Edge without black bars */}
         <canvas
@@ -115,7 +115,7 @@ function CraftCard({ craft, onSelectCraft }) {
                 {craft.category}
               </span>
               <span className="text-[10px] font-bold bg-black/30 px-2 py-0.5 rounded-full">
-                {craft.fileSize}
+                {craft.year}
               </span>
             </div>
 
@@ -167,18 +167,35 @@ function CraftCard({ craft, onSelectCraft }) {
         )}
       </div>
 
-      {/* Card Bottom: Title & Action - Clean & Concise */}
-      <div className="p-4 sm:p-5 flex flex-col justify-between flex-1 bg-white dark:bg-slate-900 border-t border-rose-100/60 dark:border-slate-800">
+      {/* Card Bottom: Aesthetic Metadata & Charming Highlights */}
+      <div className="p-4 sm:p-5 flex flex-col justify-between flex-1 bg-white dark:bg-slate-900 border-t border-rose-50 dark:border-slate-800">
+        
+        {/* Category Pill & Year */}
+        <div className="flex items-center justify-between gap-2 mb-2.5">
+          <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-rose-50 dark:bg-rose-950/70 text-rose-700 dark:text-rose-300 text-[10px] sm:text-[11px] font-semibold border border-rose-200/60 dark:border-rose-900/50">
+            <span className="text-amber-500 text-xs">✦</span>
+            <span>{craft.category}</span>
+          </span>
+          <span className="text-[10px] sm:text-[11px] font-medium text-slate-400 dark:text-slate-500 bg-slate-100 dark:bg-slate-800 px-2 py-0.5 rounded-full">
+            {craft.year}
+          </span>
+        </div>
+
+        {/* Project Title */}
         <h3 className="text-sm sm:text-base font-bold text-slate-900 dark:text-white group-hover:text-rose-700 dark:group-hover:text-rose-400 transition-colors leading-snug line-clamp-2">
           {craft.title}
         </h3>
-        
-        <div className="mt-3 pt-2.5 border-t border-rose-50 dark:border-slate-800/80 flex items-center justify-between text-[11px] text-slate-500 dark:text-slate-400">
-          <span className="flex items-center gap-1 font-semibold text-rose-700 dark:text-rose-400">
-            <i className="fas fa-eye text-xs"></i>
-            <span>Lihat Selengkapnya</span>
+
+        {/* Aesthetic Highlights & Interactive Action Icon */}
+        <div className="mt-3 pt-3 border-t border-rose-50/80 dark:border-slate-800/80 flex items-center justify-between">
+          <div className="flex items-center gap-1.5 text-[11px] font-medium text-slate-500 dark:text-slate-400">
+            <i className="fas fa-wand-magic-sparkles text-amber-500 text-xs shrink-0"></i>
+            <span className="truncate max-w-[170px] sm:max-w-[190px]">{craft.highlights}</span>
+          </div>
+          
+          <span className="w-7 h-7 rounded-full bg-rose-50 dark:bg-rose-950/60 text-rose-600 dark:text-rose-400 group-hover:bg-rose-700 group-hover:text-white flex items-center justify-center text-xs transition-all shadow-2xs group-hover:scale-110 shrink-0">
+            <i className="fas fa-arrow-right text-[10px] transform -rotate-45 group-hover:rotate-0 transition-transform"></i>
           </span>
-          <span className="font-medium text-slate-400 dark:text-slate-500">{craft.fileSize}</span>
         </div>
       </div>
     </div>
