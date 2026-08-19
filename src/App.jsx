@@ -4,10 +4,12 @@ import { Navbar } from './components/Navbar';
 import { Hero } from './components/Hero';
 import { Stats } from './components/Stats';
 import { About } from './components/About';
+import { CreativeCrafts } from './components/CreativeCrafts';
 import { Experience } from './components/Experience';
 import { Projects } from './components/Projects';
 import { Certificates } from './components/Certificates';
 import { ProjectModal } from './components/ProjectModal';
+import { CraftModal } from './components/CraftModal';
 import { CVModal } from './components/CVModal';
 import { Contact } from './components/Contact';
 import { InteractiveDecorations } from './components/InteractiveDecorations';
@@ -16,6 +18,7 @@ import { Footer } from './components/Footer';
 export function App() {
   const [darkMode, setDarkMode] = useState(false);
   const [selectedProject, setSelectedProject] = useState(null);
+  const [selectedCraft, setSelectedCraft] = useState(null);
   const [isCVOpen, setIsCVOpen] = useState(false);
   const [toastMessage, setToastMessage] = useState(null);
 
@@ -65,6 +68,12 @@ export function App() {
           onShowToast={showToast}
         />
 
+        {/* Featured Creative Crafts (Scraft Foto) - Highlighted Directly After About Me */}
+        <CreativeCrafts
+          crafts={portfolioData.creativeCrafts}
+          onSelectCraft={(c) => setSelectedCraft(c)}
+        />
+
         <Experience
           education={portfolioData.education}
           experiences={portfolioData.experiences}
@@ -90,6 +99,16 @@ export function App() {
       <Footer
         personal={portfolioData.personal}
       />
+
+      {/* Craft Project (Scraft Foto) Detail & PDF Viewer Modal */}
+      {selectedCraft && (
+        <CraftModal
+          craft={selectedCraft}
+          allCrafts={portfolioData.creativeCrafts}
+          onSelectCraft={(c) => setSelectedCraft(c)}
+          onClose={() => setSelectedCraft(null)}
+        />
+      )}
 
       {/* Project Detail Modal */}
       {selectedProject && (

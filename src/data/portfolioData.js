@@ -39,7 +39,110 @@ export const portfolioData = {
     { label: "Indeks Prestasi Kumulatif", value: "3.82", unit: "IPK", desc: "Dari skala 4.00 (Konsistensi Akademik)" },
     { label: "Pengalaman Organisasi", value: "2", unit: "Periode", desc: "Divisi Kewirausahaan HMJ DIKMI" },
     { label: "Kepanitiaan & Program", value: "6+", unit: "Event", desc: "Tingkat Fakultas, Univ, & Nasional" },
-    { label: "Portofolio & Studi Kasus", value: "6+", unit: "Karya", desc: "PKM-K, Bisnis Digital, & Modul Ajar" }
+    { label: "Portofolio & Karya Kreatif", value: "10+", unit: "Karya", desc: "Scraft Foto, Bisnis, & Modul Ajar" }
+  ],
+
+  creativeCrafts: [
+    {
+      id: "scraft-bestfriend",
+      title: "Scraft Foto Spesial Sahabat (Bestfriend Edition)",
+      category: "Sahabat & Personal",
+      filterCategory: "Sahabat",
+      tag: "Handmade Scrapbook & Memory Keepsake",
+      shortDesc: "Karya kerajinan scrapbook dan kolase foto kenangan persahabatan dengan ornamen estetik, tipografi personal, serta tata letak memori berharga yang menyentuh hati.",
+      fullDesc: "Proyek desain dan kerajinan tangan 'Scraft Foto Bestfriend' yang dirancang khusus sebagai kenang-kenangan persahabatan yang abadi. Menggabungkan teknik komposisi foto harmonis, kutipan pesan bermakna, pemilihan palet warna hangat, serta ornamen visual estetik yang memperkuat kehangatan ikatan persahabatan.",
+      pdfUrl: "./Proyek/Scraft%20Foto%20Give%20Bestfriend.pdf",
+      fileName: "Scraft Foto Give Bestfriend.pdf",
+      fileSize: "11.8 MB",
+      year: "2024",
+      highlights: "Kado Kenangan Sahabat Karib",
+      features: [
+        "Kolase Foto Memori & Momen Berharga",
+        "Tipografi Kutipan & Doa Personal",
+        "Desain Layout Artistik & Hangat",
+        "Ornamen Hiasan & Bingkai Estetik",
+        "Format Resolusi Tinggi Siap Cetak"
+      ],
+      tools: ["Photo Framing", "Canva Pro", "Layout Typography", "Handmade Paper Craft", "Color Harmony"],
+      icon: "fa-heart",
+      gradient: "from-rose-500 via-pink-600 to-rose-700",
+      accentColor: "rose"
+    },
+    {
+      id: "scraft-birthday",
+      title: "Scraft Foto Ulang Tahun (Birthday Celebration Edition)",
+      category: "Ulang Tahun & Selebrasi",
+      filterCategory: "Ulang Tahun",
+      tag: "Celebration Gift & Custom Visual Story",
+      shortDesc: "Kreasi bingkai dan buku scrapbook ucapan selamat ulang tahun bertema perayaan ceria, memadukan foto momen terbaik, doa bermakna, dan ornamen visual estetik.",
+      fullDesc: "Karya kerajinan 'Scraft Foto Birthday' yang memadukan keindahan visual dan pesan penuh kehangatan dalam merayakan hari lahir. Setiap halaman dirancang dengan tata letak dinamis, ornamen perayaan bertema khusus, sentuhan personalisasi nama, tanggal lahir, dan kompilasi foto kenangan terbaik.",
+      pdfUrl: "./Proyek/Scraft%20Foto%20Give%20Birthday.pdf",
+      fileName: "Scraft Foto Give Birthday.pdf",
+      fileSize: "7.2 MB",
+      year: "2024",
+      highlights: "Kreasi Hadiah Hari Lahir & Selebrasi",
+      features: [
+        "Tema Perayaan Hari Lahir Penuh Keceriaan",
+        "Personalisasi Nama, Tanggal & Doa Harapan",
+        "Komposisi Kolase Foto Dinamis & Ceria",
+        "Ornamen Balon, Konfeti, & Bingkai Unik",
+        "Penyusunan Alur Cerita Memori Foto"
+      ],
+      tools: ["Gift Design", "Canva Pro", "Visual Composition", "Photo Collage", "Custom Embellishment"],
+      icon: "fa-cake-candles",
+      gradient: "from-amber-500 via-rose-600 to-pink-600",
+      accentColor: "amber"
+    },
+    {
+      id: "scraft-organisasi-1",
+      title: "Scraft Foto Apresiasi Organisasi (HMJ DIKMI Edition)",
+      category: "Organisasi & Apresiasi",
+      filterCategory: "Organisasi",
+      tag: "Organizational Keepsake & Farewell Gift",
+      shortDesc: "Karya kado scrapbook kenang-kenangan kepengurusan organisasi mahasiswa yang mendokumentasikan perjalanan, dinamika program kerja, dan kebersamaan tim.",
+      fullDesc: "Dokumentasi visual artistik berupa buku scrapbook kenang-kenangan akhir masa bakti kepengurusan Divisi Kewirausahaan HMJ Pendidikan Ekonomi (DIKMI). Merangkum arsip foto kegiatan, capaian unit usaha DIKMI Mart, pesan kesan antar pengurus, dan memori dinamika kepemimpinan selama satu periode kepengurusan.",
+      pdfUrl: "./Proyek/Scraft%20Foto%20Give%20Organisasi.pdf",
+      fileName: "Scraft Foto Give Organisasi.pdf",
+      fileSize: "8.2 MB",
+      year: "2024",
+      highlights: "Apresiasi Purna Bakti Pengurus Organisasi",
+      features: [
+        "Dokumentasi Perjalanan Program Kerja Divisi",
+        "Arsip Foto Kebersamaan & Kegiatan Tim",
+        "Kolase Pesan, Kesan, & Apresiasi Anggota",
+        "Sentuhan Identitas Visual HMJ DIKMI",
+        "Buku Kenangan Kenang-kenangan Masa Bakti"
+      ],
+      tools: ["HMJ DIKMI Archive", "Dokumentasi Program", "Collage Layout", "Memory Book Design", "High Resolution Print"],
+      icon: "fa-users-gear",
+      gradient: "from-rose-700 via-rose-900 to-indigo-950",
+      accentColor: "rose"
+    },
+    {
+      id: "scraft-organisasi-2",
+      title: "Scraft Foto Kenangan Organisasi Vol. 2 (Executive Edition)",
+      category: "Organisasi & Apresiasi",
+      filterCategory: "Organisasi",
+      tag: "Leadership Appreciation & Milestone Gift",
+      shortDesc: "Edisi kedua karya scrapbook apresiasi kepengurusan dengan komposisi tata letak kaya, menonjolkan capaian divisi, momen kebersamaan, dan testimoni apresiasi.",
+      fullDesc: "Lanjutan dari seri kerajinan memori organisasi yang dikembangkan dengan konsep tata letak yang semakin elegan dan terstruktur. Menampilkan galeri foto kegiatan mahasiswa, milestones pencapaian program kerja wirausaha, serta halaman apresiasi khusus bagi rekan-rekan pengurus organisasi.",
+      pdfUrl: "./Proyek/Scraft%20Foto%20Give%20Organisasi%202.pdf",
+      fileName: "Scraft Foto Give Organisasi 2.pdf",
+      fileSize: "10.7 MB",
+      year: "2025",
+      highlights: "Kenangan Keberlanjutan & Kepemimpinan",
+      features: [
+        "Milestone Capaian & Prestasi Divisi",
+        "Edisi Eksekutif & Apresiasi Kepengurusan",
+        "Struktur Tata Letak Halaman Tematik",
+        "Kualitas Visual & Kontras Foto Tajam",
+        "Desain Cover & Hiasan Eksklusif"
+      ],
+      tools: ["Leadership Archive", "Canva Composition", "Scrapbook Crafting", "Visual Storytelling", "Custom Palette"],
+      icon: "fa-award",
+      gradient: "from-rose-800 via-purple-950 to-slate-950",
+      accentColor: "purple"
+    }
   ],
 
   valuePillars: [

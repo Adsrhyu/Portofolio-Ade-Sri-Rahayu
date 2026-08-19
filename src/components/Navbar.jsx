@@ -18,7 +18,7 @@ export function Navbar({ onOpenCV, darkMode, setDarkMode }) {
       }
 
       // Active section spy
-      const sections = ['beranda', 'tentang', 'pengalaman', 'portofolio', 'sertifikat', 'kontak'];
+      const sections = ['beranda', 'tentang', 'karya-kreatif', 'pengalaman', 'portofolio', 'sertifikat', 'kontak'];
       const pos = window.scrollY + 220;
       for (const s of sections) {
         const el = document.getElementById(s);
@@ -36,6 +36,7 @@ export function Navbar({ onOpenCV, darkMode, setDarkMode }) {
   const navLinks = [
     { href: '#beranda', label: 'Beranda' },
     { href: '#tentang', label: 'Profil' },
+    { href: '#karya-kreatif', label: 'Karya Kreatif' },
     { href: '#pengalaman', label: 'Pengalaman' },
     { href: '#portofolio', label: 'Portofolio' },
     { href: '#sertifikat', label: 'Sertifikat' },
