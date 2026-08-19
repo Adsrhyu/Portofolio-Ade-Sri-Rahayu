@@ -269,7 +269,7 @@
 
   <!-- React Application Core Script (Transpiled with Babel Standalone) -->
   <script type="text/babel">
-    const { useState, useEffect } = React;
+    const { useState, useEffect, useRef, useMemo, useCallback } = React;
 
     // === DATA TERPUSAT PORTFOLIO ===
     const portfolioData = {
@@ -1209,7 +1209,7 @@
       const canvasRef = useRef(null);
       const [currentPage, setCurrentPage] = useState(1);
       const [totalPages, setTotalPages] = useState(1);
-      const [loading, setLoading] = useState(true);
+      const [isRendered, setIsRendered] = useState(false);
       const [renderError, setRenderError] = useState(false);
 
       useEffect(() => {
@@ -1219,13 +1219,14 @@
         const renderPdfPage = async () => {
           const pdfjs = window.pdfjsLib;
           if (!pdfjs) {
-            setLoading(false);
+            setRenderError(true);
             return;
           }
 
           try {
-            setLoading(true);
-            setRenderError(false);
+            if (!pdfjs.GlobalWorkerOptions.workerSrc) {
+              pdfjs.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js';
+            }
 
             const loadingTask = pdfjs.getDocument({
               url: craft.pdfUrl,
@@ -1262,12 +1263,12 @@
 
             await renderTask.promise;
             if (!isCancelled) {
-              setLoading(false);
+              setIsRendered(true);
+              setRenderError(false);
             }
           } catch (err) {
-            console.warn('PDF render info:', err);
+            console.warn('PDF rendering info for ' + craft.title + ':', err);
             if (!isCancelled) {
-              setLoading(false);
               setRenderError(true);
             }
           }
@@ -1301,36 +1302,56 @@
           {/* Visual Work Display Box - Directly Showing the Artwork */}
           <div className="relative w-full aspect-[3/4] bg-slate-950 overflow-hidden flex items-center justify-center border-b border-rose-100 dark:border-slate-800">
             
-            {/* Loading Spinner */}
-            {loading && (
-              <div className="absolute inset-0 flex flex-col items-center justify-center bg-slate-900/80 backdrop-blur-xs z-10 text-white">
-                <div className="w-8 h-8 rounded-full border-2 border-rose-400 border-t-transparent animate-spin mb-2"></div>
-                <span className="text-[11px] font-medium text-slate-300">Memuat Visual Karya...</span>
-              </div>
-            )}
+            {/* Live Canvas for rendered PDF */}
+            <canvas
+              ref={canvasRef}
+              className={`w-full h-full object-contain transition-all duration-500 group-hover:scale-[1.02] ${
+                isRendered && !renderError ? 'opacity-100' : 'hidden'
+              }`}
+            />
 
-            {/* Rendered Live Canvas of the PDF Artwork */}
-            {!renderError ? (
-              <canvas
-                ref={canvasRef}
-                className="w-full h-full object-contain transition-transform duration-300 group-hover:scale-[1.02]"
-              />
-            ) : (
-              <div className="w-full h-full flex flex-col items-center justify-center p-6 text-center text-slate-300 bg-gradient-to-br from-rose-950 to-slate-950">
-                <div className="w-14 h-14 rounded-2xl bg-rose-900/60 border border-rose-700/60 flex items-center justify-center text-rose-400 text-2xl mb-3 shadow-md">
-                  <i className="fas fa-file-pdf"></i>
+            {/* Immediate Visual Artwork Card Cover (Shown while loading or if offline/file protocol) */}
+            {(!isRendered || renderError) && (
+              <div className={`w-full h-full p-6 bg-gradient-to-br ${craft.gradient || 'from-rose-800 to-slate-950'} text-white flex flex-col justify-between relative overflow-hidden`}>
+                <div className="absolute inset-0 opacity-15" style={{ backgroundImage: 'radial-gradient(#FFFFFF 1px, transparent 1px)', backgroundSize: '14px 14px' }}></div>
+                
+                <div className="relative z-10 flex items-center justify-between">
+                  <span className="text-[10px] font-bold uppercase tracking-wider bg-white/20 backdrop-blur-md text-white px-2.5 py-0.5 rounded-full border border-white/20">
+                    {craft.category}
+                  </span>
+                  <span className="text-[10px] font-bold text-white/90 bg-black/30 px-2.5 py-0.5 rounded-full">
+                    {craft.fileSize}
+                  </span>
                 </div>
-                <span className="text-xs font-bold text-white mb-1">{craft.title}</span>
-                <span className="text-[10px] text-rose-300">Klik untuk melihat karya PDF</span>
+
+                <div className="relative z-10 flex flex-col items-center justify-center text-center my-auto">
+                  <div className="w-16 h-16 rounded-2xl bg-white/20 backdrop-blur-md border border-white/30 flex items-center justify-center text-white text-2xl shadow-lg group-hover:scale-110 group-hover:rotate-6 transition-all duration-300 mb-3">
+                    <i className={`fas ${craft.icon || 'fa-file-pdf'}`}></i>
+                  </div>
+                  <span className="text-xs font-bold text-white leading-tight drop-shadow-xs px-2">
+                    {craft.highlights}
+                  </span>
+                  <span className="text-[10px] text-white/80 mt-1 font-medium bg-black/25 px-2.5 py-0.5 rounded-md">
+                    {craft.tag}
+                  </span>
+                </div>
+
+                <div className="relative z-10 text-center">
+                  <span className="text-[10px] text-amber-200 font-semibold flex items-center justify-center gap-1">
+                    <i className="fas fa-hand-pointer text-[9px]"></i> Klik untuk melihat isi PDF
+                  </span>
+                </div>
               </div>
             )}
 
-            {/* Top Left Floating Category Badge */}
-            <div className="absolute top-3 left-3 z-10 flex items-center gap-1.5">
-              <span className="px-2.5 py-1 rounded-full bg-slate-950/80 backdrop-blur-md text-amber-300 text-[10px] font-bold uppercase tracking-wider border border-white/10 shadow-xs">
-                {craft.category}
-              </span>
-            </div>
+            {/* Top Left Floating Category Badge (Only when canvas is live) */}
+            {isRendered && !renderError && (
+              <div className="absolute top-3 left-3 z-10 flex items-center gap-1.5 pointer-events-none">
+                <span className="px-2.5 py-1 rounded-full bg-slate-950/80 backdrop-blur-md text-amber-300 text-[10px] font-bold uppercase tracking-wider border border-white/10 shadow-xs">
+                  {craft.category}
+                </span>
+              </div>
+            )}
 
             {/* Top Right Zoom Icon */}
             <div className="absolute top-3 right-3 z-10">
@@ -1339,8 +1360,8 @@
               </span>
             </div>
 
-            {/* Bottom Floating Page Controls (if multi-page PDF) */}
-            {totalPages > 1 && (
+            {/* Bottom Floating Page Controls (if multi-page PDF rendered) */}
+            {isRendered && !renderError && totalPages > 1 && (
               <div
                 onClick={(e) => e.stopPropagation()}
                 className="absolute bottom-3 inset-x-3 z-10 flex items-center justify-between px-3 py-1.5 rounded-xl bg-slate-950/85 backdrop-blur-md border border-white/15 text-white text-xs shadow-md"
