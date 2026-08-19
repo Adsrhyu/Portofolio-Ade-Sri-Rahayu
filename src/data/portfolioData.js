@@ -54,7 +54,7 @@ export const portfolioData = {
       pdfUrl: "./Proyek/Scraft%20Foto%20Give%20Bestfriend.pdf",
       fileName: "Scraft Foto Give Bestfriend.pdf",
       fileSize: "11.8 MB",
-      year: "2024",
+      year: "2026",
       highlights: "Kado Kenangan Sahabat Karib",
       features: [
         "Kolase Foto Memori & Momen Berharga",
@@ -79,7 +79,7 @@ export const portfolioData = {
       pdfUrl: "./Proyek/Scraft%20Foto%20Give%20Birthday.pdf",
       fileName: "Scraft Foto Give Birthday.pdf",
       fileSize: "7.2 MB",
-      year: "2024",
+      year: "2026",
       highlights: "Kreasi Hadiah Hari Lahir & Selebrasi",
       features: [
         "Tema Perayaan Hari Lahir Penuh Keceriaan",
@@ -104,7 +104,7 @@ export const portfolioData = {
       pdfUrl: "./Proyek/Scraft%20Foto%20Give%20Organisasi.pdf",
       fileName: "Scraft Foto Give Organisasi.pdf",
       fileSize: "8.2 MB",
-      year: "2024",
+      year: "2025",
       highlights: "Apresiasi Purna Bakti Pengurus Organisasi",
       features: [
         "Dokumentasi Perjalanan Program Kerja Divisi",
