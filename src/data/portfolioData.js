@@ -45,12 +45,12 @@ export const portfolioData = {
   creativeCrafts: [
     {
       id: "scraft-bestfriend",
-      title: "Scraft Foto Spesial Sahabat (Bestfriend Edition)",
+      title: "Scrapframe Bestfriend Edition",
       category: "Sahabat & Personal",
       filterCategory: "Sahabat",
       tag: "Handmade Scrapbook & Memory Keepsake",
       shortDesc: "Karya kerajinan scrapbook dan kolase foto kenangan persahabatan dengan ornamen estetik, tipografi personal, serta tata letak memori berharga yang menyentuh hati.",
-      fullDesc: "Proyek desain dan kerajinan tangan 'Scraft Foto Bestfriend' yang dirancang khusus sebagai kenang-kenangan persahabatan yang abadi. Menggabungkan teknik komposisi foto harmonis, kutipan pesan bermakna, pemilihan palet warna hangat, serta ornamen visual estetik yang memperkuat kehangatan ikatan persahabatan.",
+      fullDesc: "Proyek desain dan kerajinan tangan 'Scrapframe Bestfriend Edition' yang dirancang khusus sebagai kenang-kenangan persahabatan yang abadi. Menggabungkan teknik komposisi foto harmonis, kutipan pesan bermakna, pemilihan palet warna hangat, serta ornamen visual estetik yang memperkuat kehangatan ikatan persahabatan.",
       pdfUrl: "./Proyek/Scraft%20Foto%20Give%20Bestfriend.pdf",
       fileName: "Scraft Foto Give Bestfriend.pdf",
       fileSize: "11.8 MB",
@@ -70,12 +70,12 @@ export const portfolioData = {
     },
     {
       id: "scraft-birthday",
-      title: "Scraft Foto Ulang Tahun (Birthday Celebration Edition)",
+      title: "Scrapframe Birthday Edition",
       category: "Ulang Tahun & Selebrasi",
       filterCategory: "Ulang Tahun",
       tag: "Celebration Gift & Custom Visual Story",
       shortDesc: "Kreasi bingkai dan buku scrapbook ucapan selamat ulang tahun bertema perayaan ceria, memadukan foto momen terbaik, doa bermakna, dan ornamen visual estetik.",
-      fullDesc: "Karya kerajinan 'Scraft Foto Birthday' yang memadukan keindahan visual dan pesan penuh kehangatan dalam merayakan hari lahir. Setiap halaman dirancang dengan tata letak dinamis, ornamen perayaan bertema khusus, sentuhan personalisasi nama, tanggal lahir, dan kompilasi foto kenangan terbaik.",
+      fullDesc: "Karya kerajinan 'Scrapframe Birthday Edition' yang memadukan keindahan visual dan pesan penuh kehangatan dalam merayakan hari lahir. Setiap halaman dirancang dengan tata letak dinamis, ornamen perayaan bertema khusus, sentuhan personalisasi nama, tanggal lahir, dan kompilasi foto kenangan terbaik.",
       pdfUrl: "./Proyek/Scraft%20Foto%20Give%20Birthday.pdf",
       fileName: "Scraft Foto Give Birthday.pdf",
       fileSize: "7.2 MB",
@@ -95,7 +95,7 @@ export const portfolioData = {
     },
     {
       id: "scraft-organisasi-1",
-      title: "Scraft Foto Apresiasi Organisasi (HMJ DIKMI Edition)",
+      title: "Scrapframe Organisasi Edition",
       category: "Organisasi & Apresiasi",
       filterCategory: "Organisasi",
       tag: "Organizational Keepsake & Farewell Gift",
@@ -120,7 +120,7 @@ export const portfolioData = {
     },
     {
       id: "scraft-organisasi-2",
-      title: "Scraft Foto Kenangan Organisasi Vol. 2 (Executive Edition)",
+      title: "Scrapframe Organisasi Edition Vol. 2",
       category: "Organisasi & Apresiasi",
       filterCategory: "Organisasi",
       tag: "Leadership Appreciation & Milestone Gift",

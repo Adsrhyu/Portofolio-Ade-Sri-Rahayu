@@ -186,12 +186,11 @@ function CraftCard({ craft, onSelectCraft }) {
           {craft.title}
         </h3>
 
-        {/* Aesthetic Highlights & Interactive Action Icon */}
+        {/* Highlights & Interactive Action Icon */}
         <div className="mt-3 pt-3 border-t border-rose-50/80 dark:border-slate-800/80 flex items-center justify-between">
-          <div className="flex items-center gap-1.5 text-[11px] font-medium text-slate-500 dark:text-slate-400">
-            <i className="fas fa-wand-magic-sparkles text-amber-500 text-xs shrink-0"></i>
-            <span className="truncate max-w-[170px] sm:max-w-[190px]">{craft.highlights}</span>
-          </div>
+          <span className="text-[11px] font-medium text-slate-500 dark:text-slate-400 truncate max-w-[180px] sm:max-w-[200px]">
+            {craft.highlights}
+          </span>
           
           <span className="w-7 h-7 rounded-full bg-rose-50 dark:bg-rose-950/60 text-rose-600 dark:text-rose-400 group-hover:bg-rose-700 group-hover:text-white flex items-center justify-center text-xs transition-all shadow-2xs group-hover:scale-110 shrink-0">
             <i className="fas fa-arrow-right text-[10px] transform -rotate-45 group-hover:rotate-0 transition-transform"></i>
