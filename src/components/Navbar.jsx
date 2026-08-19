@@ -36,7 +36,7 @@ export function Navbar({ onOpenCV, darkMode, setDarkMode }) {
   const navLinks = [
     { href: '#beranda', label: 'Beranda' },
     { href: '#tentang', label: 'Profil' },
-    { href: '#karya-kreatif', label: 'Karya Kreatif' },
+    { href: '#karya-kreatif', label: 'Karya (Project)' },
     { href: '#pengalaman', label: 'Pengalaman' },
     { href: '#portofolio', label: 'Portofolio' },
     { href: '#sertifikat', label: 'Sertifikat' },

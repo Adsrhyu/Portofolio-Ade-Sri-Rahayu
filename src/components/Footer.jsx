@@ -41,7 +41,7 @@ export function Footer({ personal }) {
                 Karya & Bukti
               </h4>
               <ul className="space-y-2 text-xs text-slate-300">
-                <li><a href="#karya-kreatif" className="hover:text-rose-400 transition-colors">Karya Scraft Foto</a></li>
+                <li><a href="#karya-kreatif" className="hover:text-rose-400 transition-colors">Karya (Project)</a></li>
                 <li><a href="#portofolio" className="hover:text-rose-400 transition-colors">Portofolio Proyek</a></li>
                 <li><a href="#sertifikat" className="hover:text-rose-400 transition-colors">Sertifikat Resmi</a></li>
                 <li><a href="#kontak" className="hover:text-rose-400 transition-colors">Hubungi Saya</a></li>
